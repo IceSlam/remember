@@ -59,5 +59,23 @@ get_header();
 		</div>
 	</section>
 
+	<section class="is-section target">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-items-center d-flex icon justify-content-end align-item-center">
+					<img src="<? the_field('target_icon'); ?>" alt="<? the_field('target_title'); ?>">
+					<h2>
+						<? the_field('target_title'); ?>
+					</h2>
+				</div>
+				<div class="offset-lg-2 col-lg-7 d-flex align-items-center">
+					<p>
+						<? the_field('target_description'); ?>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 <?php
 get_footer();
