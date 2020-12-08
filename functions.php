@@ -187,3 +187,43 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function remember_custom_logo() {
+echo '
+	<style type="text/css">
+	#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+	display:inline-block;
+	background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/img/logo.png) !important;
+	background-position: 0 0;
+	width:20px !important;
+	height: 20px !important;
+	color:rgba(0, 0, 0, 0);
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	}
+	#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+	background-position: center;
+	}
+	</style>
+';
+}
+add_action('wp_before_admin_bar_render', 'remember_custom_logo');
+
+function remove_footer_admin () {
+	echo '<p>Тема Вспоминая будущее разработана <a href="https://iceslam.ru" target="_blank">IceSlam</a> в компании <a href="https://alianscompany.ru" target="_blank">Альянс+</a>. Работает на WordPress</p>';
+}
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+// File does not exist... return an error.
+return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+    // File exists... require it.
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
