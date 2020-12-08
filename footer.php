@@ -36,11 +36,11 @@
 					?>
 			<div class="col-lg-4 pl-5 contacts">
 				<ul class="list-unstyled mb-0 ml-5">
-					<li>
+					<!-- <li>
 						<a href="<? the_field('theme_map', 'option'); ?>" class="address">
 							<? the_field('theme_address', 'option'); ?>
 						</a>
-					</li>
+					</li> -->
 					<li>
 						<a href="tel:<? the_field('theme_phone', 'option'); ?>" class="phone">
 							<? the_field('theme_phone', 'option'); ?>
@@ -51,11 +51,11 @@
 							<? the_field('theme_email', 'option'); ?>
 						</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a class="graphic">
 							<? the_field('theme_graphic', 'option'); ?>
 						</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			<div class="col-lg-3">
