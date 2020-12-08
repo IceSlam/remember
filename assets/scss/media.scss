@@ -1,0 +1,793 @@
+// System variables
+
+$fontFamily: Montserrat, sans-serif;
+$color: #111;
+$colorActive: #E31E25;
+$colorBlue: #4188C9;
+$colorDarkBlue: #1560A6;
+$colorActiveDark: #BE0F15;
+$colorVk: #5181B8;
+$colorFb: #475993;
+$colorOk: #F7931E;
+$colorMail: #2C6085;
+$colorTwit: #2CB9E6;
+$colorInst: linear-gradient(49.12deg, #FFDD55 6.62%, #FF543E 50.06%, #C837AB 93.5%);
+$colorOverlay: rgba(6,35,55,1);
+$colorModalBg: #E0EDEF;
+
+@media screen and (max-width:575px) {
+  body {
+    overflow-x: hidden;
+  }
+  .page .is-header {
+    padding-top: 0rem;
+    .heading {
+      margin-top: -20rem !important;
+      .wishes-btn {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .page .wishes {
+    padding: 2rem;
+    .card-wrapper {
+      .card {
+        img {
+          margin-top: 4rem !important;
+        }
+        .wish {
+          margin-top: 1rem !important;
+        }
+      }
+    }
+  }
+  .page .wishes-item {
+    padding-bottom: 1rem !important;
+    .veteran-photo {
+      margin-top: 0rem !important;
+    }
+    .item-wish {
+      margin-top: 1rem !important;
+    }
+  }
+  .veterans-life {
+    margin-top: 1rem !important;
+  }
+  .is-header {
+    background-size: 300%;
+    overflow-x: hidden;
+    .is-navbar {
+      position: fixed;
+      margin-left: 0;
+      right: 1rem;
+      left: 1rem;
+      z-index: 10;
+      transition: position .5s, height .5s, width .5s;
+      .is-menu {
+        margin-left: 0;
+        .nav-item {
+          .nav-link{}
+          .nav-link.active::before,
+          .nav-link.active::after {
+            display: none;
+          }
+        }
+        .nav-item::before {
+          display: none !important;
+        }
+      }
+      form {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+    }
+    .is-navbar-mobile {
+      transition: left .5s, display .5s;
+      left: -100%;
+      width: 0 !important;
+    }
+    .is-navbar-mobile.show {
+      display: block;
+      width: 100% !important;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      transition: left .5s, display .5s;
+      z-index: 300;
+      .wrapper {
+        position: relative;
+        height: 100%;
+        .navbar-toggler {
+          position: absolute !important;
+          right: 0;
+          top: 0;
+        }
+        .navbar-brand {
+          margin-right: 0;
+          img {
+            display: block;
+            margin: 1rem auto;
+          }
+        }
+        .navbar-nav {
+          text-align: center;
+          font-weight: 600;
+        }
+        .search {
+          display: block;
+          width: 100%;
+        }
+        .search:hover {
+          background-color: transparent !important;
+        }
+        .wish {
+          display: block;
+          width: 100%;
+          border: 2px solid $colorActive;
+          box-sizing: border-box;
+          font-size: 15px;
+          color: $colorActive;
+        }
+        .nav-item {
+          margin: .5rem auto;
+        }
+      }
+    }
+    .header-wish {
+      margin-top: -5rem;
+    }
+    .header-next {
+      margin-top: 2rem;
+    }
+  }
+  .is-main {
+    .is-section.contribution {
+      .logos {
+        display: block !important;
+        img {
+          margin: 1rem auto 0;
+        }
+      }
+    }
+    .is-section.target {
+      background-size: 100%;
+      background-position: left top;
+      padding: 1rem;
+      .icon {
+        padding-top: 2rem;
+        justify-content: center !important;
+        h2 {
+          text-align: center;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .is-section.mechanics {
+      padding: 2rem 1rem 1rem;
+      background-size: 100%;
+      background-position: right top;
+      .icon {
+        order: 1;
+        justify-content: center !important;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        h2 {
+          margin-left: 1rem;
+          text-align: center;
+        }
+      }
+      .list {
+        order: 2;
+      }
+    }
+  }
+  .is-footer {
+    .menu {
+      display: none;
+    }
+    .contacts {
+      ul {
+        margin-left: 0 !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem !important;
+      }
+    }
+    .developer {
+      display: -webkit-flex !important;
+      display: -ms-flex !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+  }
+}
+
+@media screen and (min-width:576px) and (max-width:767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .page .is-header {
+    padding-top: 0rem;
+    .heading {
+      margin-top: -20rem !important;
+      .wishes-btn {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .page .wishes {
+    padding: 2rem;
+    .card-wrapper {
+      .card {
+        img {
+          margin-top: 4rem !important;
+        }
+        .wish {
+          margin-top: 1rem !important;
+        }
+      }
+    }
+  }
+  .page .wishes-item {
+    padding-bottom: 1rem !important;
+    .veteran-photo {
+      margin-top: 0rem !important;
+    }
+    .item-wish {
+      margin-top: 1rem !important;
+    }
+  }
+  .veterans-life {
+    margin-top: 1rem !important;
+  }
+  .is-header {
+    background-size: 300%;
+    overflow-x: hidden;
+    .is-navbar {
+      position: fixed;
+      margin-left: 0;
+      right: 1rem;
+      left: 1rem;
+      z-index: 10;
+      transition: position .5s, height .5s, width .5s;
+      .is-menu {
+        margin-left: 0;
+        .nav-item {
+          .nav-link{}
+          .nav-link.active::before,
+          .nav-link.active::after {
+            display: none;
+          }
+        }
+        .nav-item::before {
+          display: none !important;
+        }
+      }
+      form {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+    }
+    .is-navbar-mobile {
+      transition: left .5s, display .5s;
+      left: -100%;
+      width: 0 !important;
+    }
+    .is-navbar-mobile.show {
+      display: block;
+      width: 100% !important;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      transition: left .5s, display .5s;
+      z-index: 300;
+      .wrapper {
+        position: relative;
+        height: 100%;
+        .navbar-toggler {
+          position: absolute !important;
+          right: 0;
+          top: 0;
+        }
+        .navbar-brand {
+          margin-right: 0;
+          img {
+            display: block;
+            margin: 1rem auto;
+          }
+        }
+        .navbar-nav {
+          text-align: center;
+          font-weight: 600;
+        }
+        .search {
+          display: block;
+          width: 100%;
+        }
+        .search:hover {
+          background-color: transparent !important;
+        }
+        .wish {
+          display: block;
+          width: 100%;
+          border: 2px solid $colorActive;
+          box-sizing: border-box;
+          font-size: 15px;
+          color: $colorActive;
+        }
+        .nav-item {
+          margin: .5rem auto;
+        }
+      }
+    }
+    .header-wish {
+      margin-top: 13rem;
+    }
+    .header-next {
+      margin-top: 2rem;
+    }
+  }
+  .is-main {
+    .is-section.contribution {
+      .logos {
+        display: block !important;
+        img {
+          margin: 1rem auto 0;
+        }
+      }
+    }
+    .is-section.target {
+      background-size: 60%;
+      background-position: left top;
+      padding: 1rem;
+      .icon {
+        padding-top: 2rem;
+        justify-content: flex-start !important;
+        h2 {
+          text-align: center;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .is-section.mechanics {
+      padding: 2rem 1rem 1rem;
+      background-size: 72%;
+      background-position: right top;
+      .icon {
+        order: 1;
+        justify-content: flex-end !important;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        h2 {
+          margin-left: 1rem;
+          text-align: center;
+        }
+      }
+      .list {
+        order: 2;
+      }
+    }
+  }
+  .is-footer {
+    .menu {
+      display: none;
+    }
+    .contacts {
+      padding-left: 0 !important;
+      ul {
+        margin-left: 0 !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem !important;
+      }
+    }
+    .developer {
+      display: -webkit-flex !important;
+      display: -ms-flex !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+  body {
+    overflow-x: hidden;
+  }
+  .page .is-header {
+    padding-top: 0rem;
+    .heading {
+      margin-top: -20rem !important;
+      .wishes-btn {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .page .wishes {
+    padding: 2rem;
+    .card-wrapper {
+      .card {
+        img {
+          margin-top: 4rem !important;
+        }
+        .wish {
+          margin-top: 1rem !important;
+        }
+      }
+    }
+    .more {
+      max-width: 100% !important;
+    }
+  }
+  .page .wishes-item {
+    padding-bottom: 1rem !important;
+    .veteran-photo {
+      margin-top: calc(100% - 260%) !important;
+    }
+    .wish-info {
+      width: 100%;
+      .item-wish {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+  .veterans-life {
+    margin-top: 1rem !important;
+  }
+  .is-header {
+    background-size: 300%;
+    overflow: hidden;
+    .is-navbar {
+      position: fixed;
+      margin-left: 0;
+      right: 1rem;
+      left: 1rem;
+      z-index: 10;
+      transition: position .5s, height .5s, width .5s;
+      .is-menu {
+        margin-left: 0;
+        .nav-item {
+          .nav-link{}
+          .nav-link.active::before,
+          .nav-link.active::after {
+            display: none;
+          }
+        }
+        .nav-item::before {
+          display: none !important;
+        }
+      }
+      form {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+    }
+    .is-navbar-mobile {
+      transition: left .5s, display .5s;
+      left: -100%;
+      width: 0 !important;
+    }
+    .is-navbar-mobile.show {
+      display: block;
+      width: 100% !important;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      transition: left .5s, display .5s;
+      z-index: 300;
+      .wrapper {
+        position: relative;
+        height: 100%;
+        .navbar-toggler {
+          position: absolute !important;
+          right: 0;
+          top: 0;
+        }
+        .navbar-brand {
+          margin-right: 0;
+          img {
+            display: block;
+            margin: 1rem auto;
+          }
+        }
+        .navbar-nav {
+          text-align: center;
+          font-weight: 600;
+        }
+        .search {
+          display: block;
+          width: 100%;
+        }
+        .search:hover {
+          background-color: transparent !important;
+        }
+        .wish {
+          display: block;
+          width: 100%;
+          border: 2px solid $colorActive;
+          box-sizing: border-box;
+          font-size: 15px;
+          color: $colorActive;
+        }
+        .nav-item {
+          margin: .5rem auto;
+        }
+      }
+    }
+    .header-wish {
+      margin-top: 20rem;
+    }
+    .header-next {
+      margin-top: 2rem;
+      margin-bottom: -2rem;
+    }
+  }
+  .is-main {
+    .is-section.contribution {
+      .logos {
+        display: block !important;
+        img {
+          margin: 1rem auto 0;
+        }
+      }
+    }
+    .is-section.target {
+      background-size: 50%;
+      background-position: left top;
+      padding: 1rem;
+      .icon {
+        padding-top: 3rem;
+        justify-content: flex-start !important;
+        h2 {
+          text-align: center;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .is-section.mechanics {
+      padding: 2rem 1rem 1rem;
+      background-size: 60%;
+      background-position: right top;
+      .icon {
+        order: 1;
+        justify-content: flex-end !important;
+        padding-top: 3.5rem;
+        padding-bottom: 3rem;
+        h2 {
+          margin-left: 1rem;
+          text-align: center;
+        }
+      }
+      .list {
+        order: 2;
+      }
+    }
+    .is-section.feedback {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  .is-footer {
+    .menu {
+      display: none;
+    }
+    .contacts {
+      padding-left: 0 !important;
+      ul {
+        margin-left: 0 !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem !important;
+        li {
+          a {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .developer {
+      display: -webkit-flex !important;
+      display: -ms-flex !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+  }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+  .is-header {
+    .is-navbar {
+      .navbar-nav {
+        margin-left: 0 !important;
+      }
+      .search-wish {
+        justify-content: center !important;
+        .wish {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+          font-size: 12px;
+        }
+      }
+      .is-menu {
+      }
+    }
+  }
+  .page {
+    .is-main {
+      .section.wishes {
+        .card-wrapper {
+          .card {
+            img {
+              margin-top: calc(100% - 130%);
+            }
+          }
+        }
+        .more {
+          max-width: 100%;
+        }
+      }
+      .wishes-item {
+        .veteran-photo {
+          margin-top: calc(100% - 190%);
+        }
+      }
+    }
+  }
+  .is-main {
+    .is-section.contribution {
+      .logos {
+        display: block !important;
+        img {
+          margin: 1rem auto 0;
+        }
+      }
+    }
+    .is-section.target {
+      background-size: 50%;
+      background-position: -20% center;
+      padding: 1rem;
+      .icon {
+        padding-top: 3.8rem;
+        padding-bottom: 3.8rem;
+        h2 {
+          text-align: center;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .is-section.mechanics {
+      padding: 2rem 1rem 1rem;
+      background-size: 50%;
+      background-position: 120% center;
+      .icon {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        h2 {
+          margin-left: 1rem;
+          text-align: center;
+        }
+      }
+      .list {
+      }
+    }
+    .is-section.feedback {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  .is-footer {
+    .logo {
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1200px) and (max-width:1399px) {
+  .is-header {
+    .is-navbar {
+      .navbar-nav {
+        margin-left: 0 !important;
+      }
+      .search-wish {
+        justify-content: center !important;
+        .wish {
+          padding-left: 1rem !important;
+          padding-right: 1rem !important;
+          font-size: 12px;
+        }
+      }
+      .is-menu {
+      }
+    }
+  }
+  .page {
+    .is-header {
+      .wishes-btn {
+        font-size: .9rem !important;
+      }
+    }
+    .is-main {
+      .section.wishes {
+        .card-wrapper {
+          .card {
+            .btn {
+              font-size: .8rem;
+            }
+            img {
+              margin-top: calc(100% - 175%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .is-main {
+    .is-section.contribution {
+      .logos {
+        display: block !important;
+        img {
+          margin: 1rem auto 0;
+        }
+      }
+    }
+    .is-section.target {
+      background-size: 50%;
+      background-position: -20% center;
+      padding: 1rem;
+      .icon {
+        padding-top: 3.8rem;
+        padding-bottom: 3.8rem;
+        h2 {
+          text-align: center;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .is-section.mechanics {
+      padding: 2rem 1rem 1rem;
+      background-size: 50%;
+      background-position: 120% center;
+      .icon {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        h2 {
+          margin-left: 1rem;
+          text-align: center;
+        }
+      }
+      .list {
+      }
+    }
+    .is-section.feedback {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  .is-footer {
+    .logo {
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
