@@ -50,7 +50,7 @@
 		                  'container'       => 'div',
 		                  'container_class' => 'collapse navbar-collapse',
 		                  'container_id'    => 'remember-menu',
-		                  'menu_class'      => 'navbar-nav mb-2 mb-lg-0',
+		                  'menu_class'      => 'navbar-nav is-menu mb-2 mb-lg-0',
 		                  'menu_id'         => 'rememberMenuList',
 		                  'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 		                  'walker'          => new WP_Bootstrap_Navwalker(),

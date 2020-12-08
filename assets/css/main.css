@@ -119,6 +119,9 @@ textarea::placeholder {
 		top: 20px;
 		min-height: 70px;
 }
+.page.home .is-header .is-navbar .search-wish {
+		min-width: 330px;
+}
 .page.home .is-header .is-navbar .is-menu {
 		margin-left: 4.1875rem;
 		display: -ms-flex;
@@ -156,6 +159,29 @@ textarea::placeholder {
 		background: url(../img/active_link.svg);
 }
 .page.home .is-header .is-navbar .is-menu .nav-item .nav-link.active:after {
+		background: url(../img/active_link_bottom.svg);
+}
+.page.home .is-header .is-navbar .is-menu .nav-item.active {
+		font-size: 0.8125rem;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+}
+.page.home .is-header .is-navbar .is-menu .nav-item.active .nav-link {
+		color: #E31E25;
+}
+.page.home .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
+.page.home .is-header .is-navbar .is-menu .nav-item.active .nav-link:after {
+		content: "";
+		width: 24px;
+		height: 8px;
+		display: block;
+		margin: 0 auto;
+}
+.page.home .is-header .is-navbar .is-menu .nav-item.active .nav-link:before {
+		background: url(../img/active_link.svg);
+}
+.page.home .is-header .is-navbar .is-menu .nav-item.active .nav-link:after {
 		background: url(../img/active_link_bottom.svg);
 }
 .page.home .is-header .is-navbar .is-menu .nav-item:not(:first-child):before {
