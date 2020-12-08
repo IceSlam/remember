@@ -32,25 +32,29 @@ get_header();
 
 <main class="is-main">
 
-	<section class="section page-info container mt-5">
-		<div class="row">
+	<section class="is-section contribution container mt-5">
+		<div class="row mb-5">
 			<div class="col-md-12">
-				<h3>
-					Lorem ipsum
-				</h3>
+				<h2>
+					<? the_field('contribution_title'); ?>
+				</h2>
+			</div>
+		</div>
+		<div class="row content">
+			<div class="offset-lg-1 col-lg-10">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae placeat enim alias rerum asperiores ut incidunt, vero qui, inventore architecto ullam dolorum eum provident, sunt culpa! Ratione sed, quaerat commodi.
+					<? the_field('contribution_description'); ?>
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deleniti ducimus velit autem corporis at est vero maxime libero, ipsam, ipsa modi, numquam quis? Esse quae magni temporibus non sapiente!
+				<p class="bold">
+					<? the_field('contribution_subtitle'); ?>
 				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, saepe, ducimus. Quo est eveniet pariatur vero cumque iusto culpa quam a eaque maiores consequuntur, mollitia eum sit, dicta libero dolorem.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque non nisi ratione, recusandae voluptate maiores minima, laboriosam aliquid enim fuga. Adipisci sapiente officia ex nesciunt odit, eaque nulla tempora rerum?
-				</p>
-				<? the_content(); ?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 d-flex justify-content-center mt-3 logos">
+				<?php while ( have_rows('contribution_logos') ) : the_row(); ?>
+					<img src="<? the_sub_field('logo'); ?>" alt="<? the_sub_field('title'); ?>" class="img-fluid ml-4 mr-4">
+				<?php endwhile; ?>
 			</div>
 		</div>
 	</section>
