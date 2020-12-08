@@ -27,7 +27,7 @@
 			<div class="container-fluid">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light is-navbar">
 					<div class="container-fluid">
-						<a class="navbar-brand" href="#">
+						<a class="navbar-brand" href="<? echo get_home_url(); ?>">
 							<img
 								src="<? echo get_template_directory_uri() . '/assets/img/navbar_logo.png'; ?>"
 								height="30"
@@ -83,7 +83,7 @@
 						>
 							<i id="toggle-icon" class="fas fa-times"></i>
 						</button>
-						<a class="navbar-brand" href="#">
+						<a class="navbar-brand" href="<? echo get_home_url(); ?>">
 							<img
 								src="<? echo get_template_directory_uri() . '/assets/img/logo_vertical.svg';?>"
 								alt="Вспоминая будущее"

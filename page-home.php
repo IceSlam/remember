@@ -406,7 +406,7 @@ get_header();
 				<div class="col-lg-9 link">
 					<p>
 						Нажимая на кнопку, я даю согласие на
-						<a href="#">
+						<a href="<? the_permalink(3); ?>">
 							обработку персональных данных
 						</a>
 					</p>
