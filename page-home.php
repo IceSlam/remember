@@ -77,5 +77,27 @@ get_header();
 		</div>
 	</section>
 
+	<section class="is-section mechanics">
+		<div class="container">
+			<div class="row">
+			<div class="col-lg-7 d-flex align-items-center list pt-5 pb-5">
+				<ul class="list-unstyled">
+					<?php while ( have_rows('mechanics_list') ) : the_row(); ?>
+						<li>
+							<? the_sub_field('step'); ?>
+						</li>
+					<?php endwhile; ?>
+				</ul>
+			</div>
+				<div class="offset-lg-1 col-lg-4 align-items-center d-flex icon justify-content-start align-item-center">
+				<h2>
+					<? the_field('mechanics_title'); ?>
+				</h2>
+					<img src="<? the_field('mechanics_icon'); ?>" alt="<? the_field('mechanics_title'); ?>">
+				</div>
+			</div>
+		</div>
+	</section>
+
 <?php
 get_footer();
