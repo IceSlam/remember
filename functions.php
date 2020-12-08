@@ -50,7 +50,8 @@ if ( ! function_exists( 'remember_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'remember' ),
+				'headerDesktop' => esc_html__( 'Шапка Десктоп', 'remember' ),
+				'headerMobile' => esc_html__( 'Шапка Мобильные' , 'remember' )
 			)
 		);
 
@@ -227,3 +228,5 @@ return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the
     // File exists... require it.
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
+
+add_filter('show_admin_bar', '__return_false');
