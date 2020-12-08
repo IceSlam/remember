@@ -371,5 +371,56 @@ get_header();
 		</div>
 	</section>
 
+	<section class="is-section feedback container-fluid">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<h2>
+						Сообщите о мечте ветерана
+					</h2>
+				</div>
+			</div>
+			<div class="row mt-5">
+				<div class="col-lg-3 mb-4">
+					<input type="text" id="veteran-name" class="form-control" placeholder="Имя ветерана *" required/>
+				</div>
+				<div class="col-lg-3 mb-4">
+					<input type="text" id="applicant-name" class="form-control" placeholder="Имя заявителя *" required/>
+				</div>
+				<div class="col-lg-3 mb-4">
+					<input type="tel" id="applicant-phone" class="form-control" placeholder="+7 (___) ___-__-__"/>
+				</div>
+				<div class="col-lg-3 mb-4">
+					<input type="email" id="applicant-email" class="form-control" placeholder="E-mail *"/>
+				</div>
+				<div class="col-lg-12 mb-4">
+					<textarea class="form-control" id="application-text" rows="4" placeholder="Описание заявки *" required></textarea>
+				</div>
+				<div class="col-lg-3 mb-4">
+					<a
+						class="btn is-btn is-btn-blue btn-block"
+					>
+						Отправить заявку
+					</a>
+				</div>
+				<div class="col-lg-9 link">
+					<p>
+						Нажимая на кнопку, я даю согласие на
+						<a href="#">
+							обработку персональных данных
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p class="">
+						По всем проблемным вопросам всегда можно обратиться на прямую к Председателю Молодежного совета электроэнергетики при Минэнерго России Бессарабовой Анна Владимировне (89671423601), a.bessarabova@yandex.ru
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 <?php
 get_footer();

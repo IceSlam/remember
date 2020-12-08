@@ -375,6 +375,9 @@ textarea::placeholder {
 		padding: 1.75rem 2.6875rem 3.125rem;
 		border-radius: 50% !important;
 }
+.page.home .is-main {
+		padding-bottom: 0 !important;
+}
 
 .is-footer {
 		background: #E9EEEF;
