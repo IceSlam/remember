@@ -8,7 +8,7 @@
  *
  * @package Вспоминая_будущее
  */
-
+12345
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
