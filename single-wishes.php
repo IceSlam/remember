@@ -15,8 +15,8 @@ get_header();
 			<div class="col-md-12">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="./">Главная</a></li>
-						<li class="breadcrumb-item"><a href="./wishes">Желания</a></li>
+						<li class="breadcrumb-item"><a href="/">Главная</a></li>
+						<li class="breadcrumb-item"><a href="/wishes">Желания</a></li>
 						<li class="breadcrumb-item active" aria-current="page">Полянский Николай Михайлович</li>
 					</ol>
 				</nav>
