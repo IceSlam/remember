@@ -14,46 +14,164 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<?php wp_head(); ?>
-</head>
+	</head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'remember' ); ?></a>
+	<body id="body" <?php body_class(); ?>>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$remember_description = get_bloginfo( 'description', 'display' );
-			if ( $remember_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $remember_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<?php wp_body_open(); ?>
+		<header class="is-header">
+			<div class="container-fluid">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light is-navbar">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#">
+							<img
+								src="<? echo get_template_directory_uri() . '/assets/img/navbar_logo.png'; ?>"
+								height="30"
+								alt="Вспоминая будущее"
+								loading="lazy"
+							/>
+						</a>
+						<button
+							id="navbar-toggler"
+							class="navbar-toggler"
+							type="button"
+							onclick="showMenu()"
+						>
+							<i id="toggle-icon" class="fas fa-bars"></i>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<menu class="navbar-nav is-menu mr-auto mb-2 mb-lg-0 mt-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="./">
+										Главная
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./wishes.html">
+										Желания
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./veterans.html">
+										Наши ветераны
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./history.html">
+										История отрасли
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./support.html">
+										Поддержка проекта
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./contacts.html">
+										Контакты
+									</a>
+								</li>
+							</menu>
+							<form class="d-flex input-group w-auto search-wish">
+								<button class="btn is-btn search" type="button" >
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M2 8C2 4.691 4.691 2 8 2C11.309 2 14 4.691 14 8C14 11.309 11.309 14 8 14C4.691 14 2 11.309 2 8ZM17.707 16.293L14.312 12.897C15.365 11.543 16 9.846 16 8C16 3.589 12.411 0 8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C9.846 16 11.543 15.365 12.897 14.312L16.293 17.707C16.488 17.902 16.744 18 17 18C17.256 18 17.512 17.902 17.707 17.707C18.098 17.316 18.098 16.684 17.707 16.293Z" fill="#70C8D3"/>
+									</svg>
+								</button>
+								<a
+									class="btn is-btn wish"
+									data-toggle="modal"
+									data-target="#makeWish"
+								>
+									Осуществить желание
+								</a>
+							</form>
+						</div>
+					</div>
+				</nav>
+				<nav id="navbar" class="navbar d-lg-none navbar-light bg-light is-navbar-mobile">
+					<div class="wrapper">
+						<button
+							id="navbar-toggler"
+							class="navbar-toggler"
+							type="button"
+							onclick="closeMenu()"
+						>
+							<i id="toggle-icon" class="fas fa-times"></i>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img
+								src="<? echo get_template_directory_uri() . '/assets/img/logo_vertical.svg';?>"
+								alt="Вспоминая будущее"
+								loading="lazy"
+							/>
+						</a>
+						<div class="" id="navbarSupportedContent">
+							<menu class="navbar-nav is-menu mr-auto mb-2 mb-lg-0 mt-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="./">
+										Главная
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./wishes.html">
+										Желания
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										Наши ветераны
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="./history.html">
+										История отрасли
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										Поддержка проекта
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">
+										Контакты
+									</a>
+								</li>
+							</menu>
+							<form class="d-flex input-group w-auto">
+								<button class="btn is-btn search" type="button" >
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M2 8C2 4.691 4.691 2 8 2C11.309 2 14 4.691 14 8C14 11.309 11.309 14 8 14C4.691 14 2 11.309 2 8ZM17.707 16.293L14.312 12.897C15.365 11.543 16 9.846 16 8C16 3.589 12.411 0 8 0C3.589 0 0 3.589 0 8C0 12.411 3.589 16 8 16C9.846 16 11.543 15.365 12.897 14.312L16.293 17.707C16.488 17.902 16.744 18 17 18C17.256 18 17.512 17.902 17.707 17.707C18.098 17.316 18.098 16.684 17.707 16.293Z" fill="#70C8D3"/>
+									</svg>
+								</button>
+								<a
+									class="btn is-btn wish mt-3"
+									data-toggle="modal"
+									data-target="#makeWish"
+								>
+									Осуществить желание
+								</a>
+							</form>
+						</div>
+					</div>
+				</nav>
+				<a
+					class="btn is-btn header-wish"
+					data-toggle="modal"
+					data-target="#makeWish"
+				>
+					<img src="<? echo get_template_directory_uri() . '/assets/img/header_wish_icon.svg';?>" alt="Осуществить желание">
+					Осуществить желание
+				</a>
+				<button class="btn is-btn header-next">
+					<img src="<? echo get_template_directory_uri() . '/assets/img/header_next_icon.svg';?>" alt="Листать вниз">
+				</button>
+			</div>
+		</header>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'remember' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<main class="is-main">
