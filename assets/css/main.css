@@ -750,18 +750,33 @@ textarea::placeholder {
 		margin-left: 0 !important;
 		color: #fff !important;
 }
-.page .is-header .breadcrumb .breadcrumb-item a,
-.category .is-header .breadcrumb .breadcrumb-item a,
-.single .is-header .breadcrumb .breadcrumb-item a {
+.page .is-header .breadcrumb a,
+.category .is-header .breadcrumb a,
+.single .is-header .breadcrumb a {
 		color: #fff;
 }
-.page .is-header .breadcrumb .breadcrumb-item.active,
-.page .is-header .breadcrumb .breadcrumb-item::before,
-.category .is-header .breadcrumb .breadcrumb-item.active,
-.category .is-header .breadcrumb .breadcrumb-item::before,
-.single .is-header .breadcrumb .breadcrumb-item.active,
-.single .is-header .breadcrumb .breadcrumb-item::before {
+.page .is-header .breadcrumb .breadcrumb_last,
+.page .is-header .breadcrumb .breadcrumb_last::before,
+.category .is-header .breadcrumb .breadcrumb_last,
+.category .is-header .breadcrumb .breadcrumb_last::before,
+.single .is-header .breadcrumb .breadcrumb_last,
+.single .is-header .breadcrumb .breadcrumb_last::before {
 		color: #467176;
+}
+.page .is-header .breadcrumb .breadcrumb_last::before,
+.category .is-header .breadcrumb .breadcrumb_last::before,
+.single .is-header .breadcrumb .breadcrumb_last::before {
+		content: "/";
+		margin-left: 0.25rem;
+		margin-right: 0.5rem;
+}
+.page .is-header .breadcrumb span a + span a:before,
+.category .is-header .breadcrumb span a + span a:before,
+.single .is-header .breadcrumb span a + span a:before {
+		content: "/";
+		color: #467176;
+		margin-left: 0.25rem;
+		margin-right: 0.5rem;
 }
 .page .is-header h2,
 .category .is-header h2,

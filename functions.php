@@ -260,3 +260,16 @@ function my_acf_options_page_settings( $settings )
 }
 
 add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
+
+add_action('admin_menu', 'remove_admin_menu');
+function remove_admin_menu() {
+	remove_menu_page('edit-comments.php'); // Комментарии
+	remove_menu_page('tools.php');
+	remove_menu_page('themes.php');
+	remove_menu_page('plugins.php');
+	remove_menu_page('users.php');
+	remove_menu_page( 'options-general.php');
+	remove_menu_page( 'duplicator' );
+}
+
+add_filter('acf/settings/show_admin', '__return_false');

@@ -14,11 +14,11 @@ get_header();
 		<div class="row">
 			<div class="col-md-12">
 				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="/">Главная</a></li>
-						<li class="breadcrumb-item"><a href="/wishes">Желания</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Полянский Николай Михайлович</li>
-					</ol>
+					<?php
+					 if ( function_exists('yoast_breadcrumb') ) {
+						 yoast_breadcrumb( '<ol class="breadcrumb">','</ol>' );
+					 }
+					 ?>
 				</nav>
 			</div>
 		</div>
