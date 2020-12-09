@@ -58,11 +58,22 @@ get_header();
 					</p>
 				</div>
 				<div class="col-md-12">
-					<button href="#" class="btn is-btn item-wish-help"
-					data-toggle="modal"
-					data-target="#makeWish">
-						Осуществить желание
-					</button>
+					<? $wish = get_field('wish_status');
+					if ($wish) { ?>
+						<button href="#" class="btn is-btn item-wish-help"
+						style="border-color: #FFF;"
+						data-toggle="modal"
+						data-target="#makeWish"
+						disabled>
+							Желание исполнено
+						</button>
+					<? } else { ?>
+						<button href="#" class="btn is-btn item-wish-help"
+						data-toggle="modal"
+						data-target="#makeWish">
+							Осуществить желание
+						</button>
+					<? } ?>
 				</div>
 			</div>
 		</div>

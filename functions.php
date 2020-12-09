@@ -272,4 +272,4 @@ function remove_admin_menu() {
 	remove_menu_page( 'duplicator' );
 }
 
-add_filter('acf/settings/show_admin', '__return_false');
+// add_filter('acf/settings/show_admin', '__return_false');
