@@ -18,8 +18,7 @@ get_header();
 
 		<a
 			class="btn is-btn header-wish"
-			data-toggle="modal"
-			data-target="#makeWish"
+			href="<? echo get_category_link(3); ?>"
 		>
 			<img src="<? echo get_template_directory_uri() . '/assets/img/header_wish_icon.svg';?>" alt="Осуществить желание">
 			Осуществить желание
@@ -361,8 +360,7 @@ get_header();
 			<div class="col-md-12">
 				<a
 					class="btn is-btn"
-					data-toggle="modal"
-					data-target="#makeWish"
+					href="<? echo get_category_link(3); ?>"
 				>
 					<img src="<? echo get_template_directory_uri() . '/assets/img/header_wish_icon.svg'; ?>" alt="Осуществить желание">
 					Осуществить желание

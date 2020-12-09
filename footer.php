@@ -176,8 +176,5 @@
 </div>
 
 
-<!-- SCRIPTS -->
-<script src="./assets/js/mdb.min.js"></script>
-<script src="./assets/js/app.js"></script>
 <?php wp_footer(); ?>
 </body>
