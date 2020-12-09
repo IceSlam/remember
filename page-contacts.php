@@ -38,7 +38,7 @@ get_header();
 </div>
 </header>
 
-<main class="is-main">
+<main class="is-main pb-0" style="">
 
 <section class="section page-info container mt-5 mb-5">
 	<div class="row">
@@ -166,6 +166,48 @@ get_header();
 		</div>
 	</div>
 </section>
+
+<section class="is-section feedback container-fluid">
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-md-12">
+				<h2>
+					Обратная связь
+				</h2>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-lg-4 mb-4">
+				<input type="text" id="your-name" class="form-control" placeholder="Имя" required/>
+			</div>
+			<div class="col-lg-4 mb-4">
+				<input type="tel" id="your-phone" class="form-control" placeholder="+7 (___) ___-__-__"/>
+			</div>
+			<div class="col-lg-4 mb-4">
+				<input type="email" id="your-email" class="form-control" placeholder="E-mail"/>
+			</div>
+			<div class="col-lg-12 mb-4">
+				<textarea class="form-control" id="application-text" rows="4" placeholder="Ваше сообщение" required></textarea>
+			</div>
+			<div class="col-lg-3 mb-4">
+				<a
+					class="btn is-btn is-btn-blue btn-block"
+				>
+					Отправить заявку
+				</a>
+			</div>
+			<div class="col-lg-9 link">
+				<p>
+					Нажимая на кнопку, я даю согласие на
+					<a href="<? the_permalink(3); ?>">
+						обработку персональных данных
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <?php
 get_footer();
