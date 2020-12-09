@@ -29,7 +29,7 @@
 					<div class="container-fluid">
 						<a class="navbar-brand" href="<? echo get_home_url(); ?>">
 							<img
-								src="<? echo get_template_directory_uri() . '/assets/img/navbar_logo.png'; ?>"
+								src="<? the_field('site_logo_desktop', 'option'); ?>"
 								height="30"
 								alt="Вспоминая будущее"
 								loading="lazy"
@@ -85,7 +85,7 @@
 						</button>
 						<a class="navbar-brand" href="<? echo get_home_url(); ?>">
 							<img
-								src="<? echo get_template_directory_uri() . '/assets/img/logo_vertical.svg';?>"
+								src="<? the_field('site_logo_mobile', 'option'); ?>"
 								alt="Вспоминая будущее"
 								loading="lazy"
 							/>

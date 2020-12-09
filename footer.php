@@ -16,9 +16,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 logo">
-				<img src="<? echo get_template_directory_uri() . '/assets/img/logo_vertical.svg';?>" class="img-fluid mb-4" alt="Вспоминая будущее">
+				<img src="<? the_field('site_logo_footer', 'option') ?>" class="img-fluid mb-4" alt="Вспоминая будущее">
 				<p>
-					Вспоминая будущее &copy; 2020
+					Вспоминая будущее &copy; <?php echo date("Y");?>
 				</p>
 			</div>
 			<?
@@ -36,26 +36,41 @@
 					?>
 			<div class="col-lg-4 pl-5 contacts">
 				<ul class="list-unstyled mb-0 ml-5">
-					<!-- <li>
-						<a href="<? the_field('theme_map', 'option'); ?>" class="address">
+					<? $address = get_field('theme_address', 'option');
+					if ($address) { ?>
+					<li>
+						<a href="
+						<? $map = get_field('theme_map', 'option');
+						if ($map) {
+							the_field('theme_map', 'option');
+						} else { ?>
+							#!
+						<? } ?>
+						" class="address">
 							<? the_field('theme_address', 'option'); ?>
 						</a>
-					</li> -->
+					</li> <? } ?>
+					<? $phone = get_field('theme_phone', 'option');
+					if ($phone) { ?>
 					<li>
 						<a href="tel:<? the_field('theme_phone', 'option'); ?>" class="phone">
 							<? the_field('theme_phone', 'option'); ?>
 						</a>
-					</li>
+					</li> <? } ?>
+					<? $email = get_field('theme_email', 'option');
+					if ($email) { ?>
 					<li>
 						<a href="mailto:<? the_field('theme_email', 'option'); ?>" class="email">
 							<? the_field('theme_email', 'option'); ?>
 						</a>
-					</li>
-					<!-- <li>
-						<a class="graphic">
-							<? the_field('theme_graphic', 'option'); ?>
-						</a>
-					</li> -->
+					</li> <? } ?>
+					<? $graphic = get_field('theme_graphic', 'option');
+					if ($graphic) { ?>
+						<li>
+							<a class="graphic">
+								<? the_field('theme_graphic', 'option'); ?>
+							</a>
+						</li> <? } ?>
 				</ul>
 			</div>
 			<div class="col-lg-3">

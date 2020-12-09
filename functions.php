@@ -72,20 +72,6 @@ if ( ! function_exists( 'remember_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'remember_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
-
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		/**
 		 * Add support for core custom logo.
@@ -194,7 +180,9 @@ echo '
 	<style type="text/css">
 	#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
 	display:inline-block;
-	background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/img/logo.png) !important;
+	background-image: url(';
+	echo get_field('site_icon_admin', 'option');
+	echo ') !important;
 	background-position: 0 0;
 	width:20px !important;
 	height: 20px !important;
@@ -212,7 +200,9 @@ echo '
 add_action('wp_before_admin_bar_render', 'remember_custom_logo');
 
 function remove_footer_admin () {
-	echo '<p>Тема Вспоминая будущее разработана <a href="https://iceslam.ru" target="_blank">IceSlam</a> в компании <a href="https://alianscompany.ru" target="_blank">Альянс+</a>. Работает на WordPress</p>';
+	echo '<p>Тема ';
+	echo wp_get_theme();
+	echo ' разработана <a href="https://iceslam.ru" target="_blank">IceSlam</a> в компании <a href="https://alianscompany.ru" target="_blank">Альянс+</a>. Работает на WordPress</p>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 
@@ -233,16 +223,40 @@ add_filter('show_admin_bar', '__return_false');
 
 if( function_exists('acf_add_options_page') ) {
 
-	acf_add_options_page();
-	acf_add_options_sub_page('Шапка', 'Шапка');
-
 	acf_add_options_page(array(
-		'page_title' 	=> 'Основные настройки',
+		'page_title' 	=> 'Пользовательские настройки темы',
 		'menu_title'	=> 'Настройки темы',
-		'menu_slug' 	=> 'theme-general-settings',
-		'parent_slug' => 'themes.php',
+		'menu_slug' 	=> 'contacts-settings',
+		'parent_slug' => 'acf-options',
 		'capability'	=> 'edit_posts',
-		'redirect'		=> false
+		'redirect'		=> true
 	));
 
 }
+
+$settings = array(
+
+	/* (string) the options page title. Defaults to 'Options' */
+	'title' => __('Настройки темы Вспоминая будущее', 'acf'),
+
+	/* (string) the options page menu title. Defaults to 'Options' */
+	'menu' => __('Настройки темы', 'acf'),
+
+	/* (string) the options page url slug. Defaults to 'acf-options' */
+	'slug' => 'acf-options',
+
+	/* the capability needed to access this admin page. Defaults to 'edit_posts' */
+	'capability' => 'edit_posts',
+
+	/* an array of sub menu pages (strings or arrays). Defaults to an empty array */
+	'pages' => array()
+);
+
+function my_acf_options_page_settings( $settings )
+{
+	$settings['title'] = 'Пользовательские настройки темы';
+
+	return $settings;
+}
+
+add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
