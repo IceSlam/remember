@@ -108,7 +108,8 @@ textarea::placeholder {
 
 .page .is-header,
 .category .is-header,
-.single .is-header {
+.single .is-header,
+.error404 .is-header {
 		background: url(../img/page_header_bg.jpg);
 		background-position: center top;
 		background-repeat: no-repeat;
@@ -116,7 +117,8 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar,
 .category .is-header .is-navbar,
-.single .is-header .is-navbar {
+.single .is-header .is-navbar,
+.error404 .is-header .is-navbar {
 		background: rgba(255, 255, 255, 0.8);
 		box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.07);
 		border-radius: 4px;
@@ -125,12 +127,14 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .search-wish,
 .category .is-header .is-navbar .search-wish,
-.single .is-header .is-navbar .search-wish {
+.single .is-header .is-navbar .search-wish,
+.error404 .is-header .is-navbar .search-wish {
 		min-width: 330px;
 }
 .page .is-header .is-navbar .is-menu,
 .category .is-header .is-navbar .is-menu,
-.single .is-header .is-navbar .is-menu {
+.single .is-header .is-navbar .is-menu,
+.error404 .is-header .is-navbar .is-menu {
 		margin-left: 4.1875rem;
 		display: -ms-flex;
 		display: flex;
@@ -138,7 +142,8 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .is-menu .nav-item,
 .category .is-header .is-navbar .is-menu .nav-item,
-.single .is-header .is-navbar .is-menu .nav-item {
+.single .is-header .is-navbar .is-menu .nav-item,
+.error404 .is-header .is-navbar .is-menu .nav-item {
 		font-size: 0.8125rem;
 		display: -ms-flex;
 		display: flex;
@@ -146,7 +151,8 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .is-menu .nav-item .nav-link,
 .category .is-header .is-navbar .is-menu .nav-item .nav-link,
-.single .is-header .is-navbar .is-menu .nav-item .nav-link {
+.single .is-header .is-navbar .is-menu .nav-item .nav-link,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link {
 		font-weight: 500;
 		text-transform: uppercase;
 		color: #111;
@@ -154,13 +160,15 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .is-menu .nav-item .nav-link:hover,
 .category .is-header .is-navbar .is-menu .nav-item .nav-link:hover,
-.single .is-header .is-navbar .is-menu .nav-item .nav-link:hover {
+.single .is-header .is-navbar .is-menu .nav-item .nav-link:hover,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link:hover {
 		color: #E31E25;
 		transition: color 0.5s;
 }
 .page .is-header .is-navbar .is-menu .nav-item .nav-link.active,
 .category .is-header .is-navbar .is-menu .nav-item .nav-link.active,
-.single .is-header .is-navbar .is-menu .nav-item .nav-link.active {
+.single .is-header .is-navbar .is-menu .nav-item .nav-link.active,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link.active {
 		color: #E31E25;
 }
 .page .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
@@ -168,7 +176,9 @@ textarea::placeholder {
 .category .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
 .category .is-header .is-navbar .is-menu .nav-item .nav-link.active:after,
 .single .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
-.single .is-header .is-navbar .is-menu .nav-item .nav-link.active:after {
+.single .is-header .is-navbar .is-menu .nav-item .nav-link.active:after,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link.active:after {
 		content: "";
 		width: 24px;
 		height: 8px;
@@ -177,17 +187,20 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
 .category .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
-.single .is-header .is-navbar .is-menu .nav-item .nav-link.active:before {
+.single .is-header .is-navbar .is-menu .nav-item .nav-link.active:before,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link.active:before {
 		background: url(../img/active_link.svg);
 }
 .page .is-header .is-navbar .is-menu .nav-item .nav-link.active:after,
 .category .is-header .is-navbar .is-menu .nav-item .nav-link.active:after,
-.single .is-header .is-navbar .is-menu .nav-item .nav-link.active:after {
+.single .is-header .is-navbar .is-menu .nav-item .nav-link.active:after,
+.error404 .is-header .is-navbar .is-menu .nav-item .nav-link.active:after {
 		background: url(../img/active_link_bottom.svg);
 }
 .page .is-header .is-navbar .is-menu .nav-item.active,
 .category .is-header .is-navbar .is-menu .nav-item.active,
-.single .is-header .is-navbar .is-menu .nav-item.active {
+.single .is-header .is-navbar .is-menu .nav-item.active,
+.error404 .is-header .is-navbar .is-menu .nav-item.active {
 		font-size: 0.8125rem;
 		display: -ms-flex;
 		display: flex;
@@ -195,7 +208,8 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .is-menu .nav-item.active .nav-link,
 .category .is-header .is-navbar .is-menu .nav-item.active .nav-link,
-.single .is-header .is-navbar .is-menu .nav-item.active .nav-link {
+.single .is-header .is-navbar .is-menu .nav-item.active .nav-link,
+.error404 .is-header .is-navbar .is-menu .nav-item.active .nav-link {
 		color: #E31E25;
 }
 .page .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
@@ -203,7 +217,9 @@ textarea::placeholder {
 .category .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
 .category .is-header .is-navbar .is-menu .nav-item.active .nav-link:after,
 .single .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
-.single .is-header .is-navbar .is-menu .nav-item.active .nav-link:after {
+.single .is-header .is-navbar .is-menu .nav-item.active .nav-link:after,
+.error404 .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
+.error404 .is-header .is-navbar .is-menu .nav-item.active .nav-link:after {
 		content: "";
 		width: 24px;
 		height: 8px;
@@ -212,17 +228,20 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
 .category .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
-.single .is-header .is-navbar .is-menu .nav-item.active .nav-link:before {
+.single .is-header .is-navbar .is-menu .nav-item.active .nav-link:before,
+.error404 .is-header .is-navbar .is-menu .nav-item.active .nav-link:before {
 		background: url(../img/active_link.svg);
 }
 .page .is-header .is-navbar .is-menu .nav-item.active .nav-link:after,
 .category .is-header .is-navbar .is-menu .nav-item.active .nav-link:after,
-.single .is-header .is-navbar .is-menu .nav-item.active .nav-link:after {
+.single .is-header .is-navbar .is-menu .nav-item.active .nav-link:after,
+.error404 .is-header .is-navbar .is-menu .nav-item.active .nav-link:after {
 		background: url(../img/active_link_bottom.svg);
 }
 .page .is-header .is-navbar .is-menu .nav-item:not(:first-child):before,
 .category .is-header .is-navbar .is-menu .nav-item:not(:first-child):before,
-.single .is-header .is-navbar .is-menu .nav-item:not(:first-child):before {
+.single .is-header .is-navbar .is-menu .nav-item:not(:first-child):before,
+.error404 .is-header .is-navbar .is-menu .nav-item:not(:first-child):before {
 		content: "";
 		background: #70C8D3;
 		display: -ms-inline-flex;
@@ -234,14 +253,16 @@ textarea::placeholder {
 }
 .page .is-header .is-navbar .search,
 .category .is-header .is-navbar .search,
-.single .is-header .is-navbar .search {
+.single .is-header .is-navbar .search,
+.error404 .is-header .is-navbar .search {
 		background-color: transparent !important;
 		padding-left: 1rem;
 		padding-right: 1rem;
 }
 .page .is-header .is-navbar .wish,
 .category .is-header .is-navbar .wish,
-.single .is-header .is-navbar .wish {
+.single .is-header .is-navbar .wish,
+.error404 .is-header .is-navbar .wish {
 		border: 2px solid #E31E25;
 		box-sizing: border-box;
 		font-size: 15px;
@@ -250,7 +271,8 @@ textarea::placeholder {
 }
 .page .is-header .header-wish,
 .category .is-header .header-wish,
-.single .is-header .header-wish {
+.single .is-header .header-wish,
+.error404 .is-header .header-wish {
 		border: 2px solid #E31E25;
 		box-sizing: border-box;
 		font-size: 1.125rem;
@@ -261,12 +283,14 @@ textarea::placeholder {
 }
 .page .is-header .header-wish img,
 .category .is-header .header-wish img,
-.single .is-header .header-wish img {
+.single .is-header .header-wish img,
+.error404 .is-header .header-wish img {
 		margin-right: 0.5rem;
 }
 .page .is-header .header-next,
 .category .is-header .header-next,
-.single .is-header .header-next {
+.single .is-header .header-next,
+.error404 .is-header .header-next {
 		display: block;
 		margin: 0 auto;
 		background: #fff;
@@ -728,12 +752,14 @@ textarea::placeholder {
 
 .page,
 .category,
-.single {
+.single,
+.error404 {
 		margin-bottom: 0 !important;
 }
 .page .is-header,
 .category .is-header,
-.single .is-header {
+.single .is-header,
+.error404 .is-header {
 		background: url(../img/page_header_bg.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -743,7 +769,8 @@ textarea::placeholder {
 }
 .page .is-header .breadcrumb,
 .category .is-header .breadcrumb,
-.single .is-header .breadcrumb {
+.single .is-header .breadcrumb,
+.error404 .is-header .breadcrumb {
 		background-color: transparent;
 		font-size: 0.875rem;
 		padding-left: 0 !important;
@@ -752,7 +779,8 @@ textarea::placeholder {
 }
 .page .is-header .breadcrumb a,
 .category .is-header .breadcrumb a,
-.single .is-header .breadcrumb a {
+.single .is-header .breadcrumb a,
+.error404 .is-header .breadcrumb a {
 		color: #fff;
 }
 .page .is-header .breadcrumb .breadcrumb_last,
@@ -760,19 +788,23 @@ textarea::placeholder {
 .category .is-header .breadcrumb .breadcrumb_last,
 .category .is-header .breadcrumb .breadcrumb_last::before,
 .single .is-header .breadcrumb .breadcrumb_last,
-.single .is-header .breadcrumb .breadcrumb_last::before {
+.single .is-header .breadcrumb .breadcrumb_last::before,
+.error404 .is-header .breadcrumb .breadcrumb_last,
+.error404 .is-header .breadcrumb .breadcrumb_last::before {
 		color: #467176;
 }
 .page .is-header .breadcrumb .breadcrumb_last::before,
 .category .is-header .breadcrumb .breadcrumb_last::before,
-.single .is-header .breadcrumb .breadcrumb_last::before {
+.single .is-header .breadcrumb .breadcrumb_last::before,
+.error404 .is-header .breadcrumb .breadcrumb_last::before {
 		content: "/";
 		margin-left: 0.25rem;
 		margin-right: 0.5rem;
 }
 .page .is-header .breadcrumb span a + span a:before,
 .category .is-header .breadcrumb span a + span a:before,
-.single .is-header .breadcrumb span a + span a:before {
+.single .is-header .breadcrumb span a + span a:before,
+.error404 .is-header .breadcrumb span a + span a:before {
 		content: "/";
 		color: #467176;
 		margin-left: 0.25rem;
@@ -780,13 +812,15 @@ textarea::placeholder {
 }
 .page .is-header h2,
 .category .is-header h2,
-.single .is-header h2 {
+.single .is-header h2,
+.error404 .is-header h2 {
 		font-size: 3.125rem;
 		font-weight: 800;
 }
 .page .is-header .wishes-btn,
 .category .is-header .wishes-btn,
-.single .is-header .wishes-btn {
+.single .is-header .wishes-btn,
+.error404 .is-header .wishes-btn {
 		font-size: 1.125rem !important;
 		font-weight: bold !important;
 		padding: 1.25rem 2.5rem !important;
@@ -799,12 +833,14 @@ textarea::placeholder {
 }
 .page .is-header .wishes-btn svg,
 .category .is-header .wishes-btn svg,
-.single .is-header .wishes-btn svg {
+.single .is-header .wishes-btn svg,
+.error404 .is-header .wishes-btn svg {
 		margin-right: 1rem;
 }
 .page .is-header .wishes-btn svg path,
 .category .is-header .wishes-btn svg path,
-.single .is-header .wishes-btn svg path {
+.single .is-header .wishes-btn svg path,
+.error404 .is-header .wishes-btn svg path {
 		fill: none;
 		stroke: #E31E25;
 		transition: all 0.5s;
@@ -814,7 +850,9 @@ textarea::placeholder {
 .category .is-header .wishes-btn.active,
 .category .is-header .wishes-btn:hover,
 .single .is-header .wishes-btn.active,
-.single .is-header .wishes-btn:hover {
+.single .is-header .wishes-btn:hover,
+.error404 .is-header .wishes-btn.active,
+.error404 .is-header .wishes-btn:hover {
 		color: #fff !important;
 		background: #E31E25;
 		transition: color 0.5s, background 0.5s;
@@ -824,14 +862,17 @@ textarea::placeholder {
 .category .is-header .wishes-btn.active svg path,
 .category .is-header .wishes-btn:hover svg path,
 .single .is-header .wishes-btn.active svg path,
-.single .is-header .wishes-btn:hover svg path {
+.single .is-header .wishes-btn:hover svg path,
+.error404 .is-header .wishes-btn.active svg path,
+.error404 .is-header .wishes-btn:hover svg path {
 		fill: #FBBB48;
 		stroke: none;
 		transition: all 0.5s;
 }
 .page .is-header .search-by-reg,
 .category .is-header .search-by-reg,
-.single .is-header .search-by-reg {
+.single .is-header .search-by-reg,
+.error404 .is-header .search-by-reg {
 		background: #fff;
 		border-radius: 4px;
 		height: 100%;
@@ -839,7 +880,8 @@ textarea::placeholder {
 }
 .page .is-header .search-by-reg input,
 .category .is-header .search-by-reg input,
-.single .is-header .search-by-reg input {
+.single .is-header .search-by-reg input,
+.error404 .is-header .search-by-reg input {
 		height: auto;
 		background-color: transparent !important;
 		font-size: 0.9375rem;
@@ -847,41 +889,48 @@ textarea::placeholder {
 }
 .page .is-header .search-by-reg button,
 .category .is-header .search-by-reg button,
-.single .is-header .search-by-reg button {
+.single .is-header .search-by-reg button,
+.error404 .is-header .search-by-reg button {
 		padding: 1rem 1.25rem;
 }
 .page .is-header .search-by-reg button svg path,
 .category .is-header .search-by-reg button svg path,
-.single .is-header .search-by-reg button svg path {
+.single .is-header .search-by-reg button svg path,
+.error404 .is-header .search-by-reg button svg path {
 		fill: #111;
 		opacity: 0.2;
 		transition: opacity 0.5s;
 }
 .page .is-header .search-by-reg button:hover,
 .category .is-header .search-by-reg button:hover,
-.single .is-header .search-by-reg button:hover {
+.single .is-header .search-by-reg button:hover,
+.error404 .is-header .search-by-reg button:hover {
 		background-color: transparent !important;
 }
 .page .is-header .search-by-reg button:hover svg path,
 .category .is-header .search-by-reg button:hover svg path,
-.single .is-header .search-by-reg button:hover svg path {
+.single .is-header .search-by-reg button:hover svg path,
+.error404 .is-header .search-by-reg button:hover svg path {
 		opacity: 1;
 		transition: opacity 0.5s;
 }
 .page .is-header .search-by-reg:hover,
 .category .is-header .search-by-reg:hover,
-.single .is-header .search-by-reg:hover {
+.single .is-header .search-by-reg:hover,
+.error404 .is-header .search-by-reg:hover {
 		border: 2px solid #4188C9;
 		transition: all 0.5s;
 }
 .page .is-main .section.wishes .card-wrapper,
 .category .is-main .section.wishes .card-wrapper,
-.single .is-main .section.wishes .card-wrapper {
+.single .is-main .section.wishes .card-wrapper,
+.error404 .is-main .section.wishes .card-wrapper {
 		padding: 1rem;
 }
 .page .is-main .section.wishes .card-wrapper .card,
 .category .is-main .section.wishes .card-wrapper .card,
-.single .is-main .section.wishes .card-wrapper .card {
+.single .is-main .section.wishes .card-wrapper .card,
+.error404 .is-main .section.wishes .card-wrapper .card {
 		background: #FFFFFF;
 		padding: 2.5rem 2rem;
 		border: 5px solid #F3F3F3;
@@ -890,13 +939,15 @@ textarea::placeholder {
 }
 .page .is-main .section.wishes .card-wrapper .card img,
 .category .is-main .section.wishes .card-wrapper .card img,
-.single .is-main .section.wishes .card-wrapper .card img {
+.single .is-main .section.wishes .card-wrapper .card img,
+.error404 .is-main .section.wishes .card-wrapper .card img {
 		margin-top: calc(100% - 150%);
 		width: 100%;
 }
 .page .is-main .section.wishes .card-wrapper .card .region,
 .category .is-main .section.wishes .card-wrapper .card .region,
-.single .is-main .section.wishes .card-wrapper .card .region {
+.single .is-main .section.wishes .card-wrapper .card .region,
+.error404 .is-main .section.wishes .card-wrapper .card .region {
 		font-size: 0.9375rem;
 		color: #9DA2A3;
 		margin-bottom: 0.625rem;
@@ -904,32 +955,37 @@ textarea::placeholder {
 }
 .page .is-main .section.wishes .card-wrapper .card h3,
 .category .is-main .section.wishes .card-wrapper .card h3,
-.single .is-main .section.wishes .card-wrapper .card h3 {
+.single .is-main .section.wishes .card-wrapper .card h3,
+.error404 .is-main .section.wishes .card-wrapper .card h3 {
 		font-size: 1.75rem;
 		font-weight: 800;
 		line-height: 0.85;
 }
 .page .is-main .section.wishes .card-wrapper .card h3 .last-name,
 .category .is-main .section.wishes .card-wrapper .card h3 .last-name,
-.single .is-main .section.wishes .card-wrapper .card h3 .last-name {
+.single .is-main .section.wishes .card-wrapper .card h3 .last-name,
+.error404 .is-main .section.wishes .card-wrapper .card h3 .last-name {
 		font-size: 1.25rem;
 		font-weight: 500;
 }
 .page .is-main .section.wishes .card-wrapper .card .age,
 .category .is-main .section.wishes .card-wrapper .card .age,
-.single .is-main .section.wishes .card-wrapper .card .age {
+.single .is-main .section.wishes .card-wrapper .card .age,
+.error404 .is-main .section.wishes .card-wrapper .card .age {
 		font-size: 1.0625rem;
 }
 .page .is-main .section.wishes .card-wrapper .card .wish,
 .category .is-main .section.wishes .card-wrapper .card .wish,
-.single .is-main .section.wishes .card-wrapper .card .wish {
+.single .is-main .section.wishes .card-wrapper .card .wish,
+.error404 .is-main .section.wishes .card-wrapper .card .wish {
 		font-size: 0.9375rem;
 		line-height: 1.25;
 		margin-bottom: 1.5rem;
 }
 .page .is-main .section.wishes .card-wrapper .card .btn,
 .category .is-main .section.wishes .card-wrapper .card .btn,
-.single .is-main .section.wishes .card-wrapper .card .btn {
+.single .is-main .section.wishes .card-wrapper .card .btn,
+.error404 .is-main .section.wishes .card-wrapper .card .btn {
 		display: block;
 		padding: 1.125rem 1.8125rem;
 		border: 2px solid #E31E25;
@@ -938,7 +994,8 @@ textarea::placeholder {
 }
 .page .is-main .section.wishes .more,
 .category .is-main .section.wishes .more,
-.single .is-main .section.wishes .more {
+.single .is-main .section.wishes .more,
+.error404 .is-main .section.wishes .more {
 		background: #4188C9;
 		display: block !important;
 		max-width: 243px;
@@ -950,42 +1007,50 @@ textarea::placeholder {
 }
 .page .is-main .section.wishes .more:hover,
 .category .is-main .section.wishes .more:hover,
-.single .is-main .section.wishes .more:hover {
+.single .is-main .section.wishes .more:hover,
+.error404 .is-main .section.wishes .more:hover {
 		background: #1560A6;
 }
 
 .page .wishes-item-title,
-.single .wishes-item-title {
+.single .wishes-item-title,
+.error404 .wishes-item-title {
 		font-size: 3.125rem;
 		font-weight: 800;
 }
 .page .item-age,
-.single .item-age {
+.single .item-age,
+.error404 .item-age {
 		font-weight: 800;
 		color: #fff;
 		font-size: 1.875rem;
 }
 .page .item-region,
-.single .item-region {
+.single .item-region,
+.error404 .item-region {
 		font-weight: 500;
 		color: #fff;
 		font-size: 1.625rem;
 }
 .page .is-main,
-.single .is-main {
+.single .is-main,
+.error404 .is-main {
 		padding-bottom: 3rem;
 }
 .page .is-main .wishes-item .veteran-photo,
-.single .is-main .wishes-item .veteran-photo {
+.single .is-main .wishes-item .veteran-photo,
+.error404 .is-main .wishes-item .veteran-photo {
 		margin-top: calc(100% - 170%);
 		position: relative;
 }
 .page .is-main .wishes-item .item-wish,
-.single .is-main .wishes-item .item-wish {
+.single .is-main .wishes-item .item-wish,
+.error404 .is-main .wishes-item .item-wish {
 		font-size: 1.25rem;
 }
 .page .is-main .wishes-item .item-wish-help,
-.single .is-main .wishes-item .item-wish-help {
+.single .is-main .wishes-item .item-wish-help,
+.error404 .is-main .wishes-item .item-wish-help {
 		display: block;
 		padding: 1.125rem 1.8125rem;
 		border: 2px solid #E31E25;
@@ -994,33 +1059,39 @@ textarea::placeholder {
 		max-width: 249px;
 }
 .page .is-main .veterans-life,
-.single .is-main .veterans-life {
+.single .is-main .veterans-life,
+.error404 .is-main .veterans-life {
 		padding-bottom: 1rem;
 		border-bottom: 1px solid #DEE8EA;
 }
 .page .is-main .veterans-life h3,
-.single .is-main .veterans-life h3 {
+.single .is-main .veterans-life h3,
+.error404 .is-main .veterans-life h3 {
 		font-weight: bold;
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
 }
 .page .is-main .veterans-life p,
-.single .is-main .veterans-life p {
+.single .is-main .veterans-life p,
+.error404 .is-main .veterans-life p {
 		font-size: 1.0625rem;
 		margin-bottom: 1.5rem;
 }
 .page .is-main .veterans-gallery,
-.single .is-main .veterans-gallery {
+.single .is-main .veterans-gallery,
+.error404 .is-main .veterans-gallery {
 		padding-bottom: 1rem;
 }
 .page .is-main .veterans-gallery h3,
-.single .is-main .veterans-gallery h3 {
+.single .is-main .veterans-gallery h3,
+.error404 .is-main .veterans-gallery h3 {
 		font-weight: bold;
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
 }
 .page .is-main .veterans-gallery .card,
-.single .is-main .veterans-gallery .card {
+.single .is-main .veterans-gallery .card,
+.error404 .is-main .veterans-gallery .card {
 		box-shadow: none;
 		min-height: 300px;
 		background-position: center !important;
