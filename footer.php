@@ -165,24 +165,7 @@
 				<h3>
 					Перезвоните мне
 				</h3>
-					<form action="#">
-						<input type="text" id="makeWish-name" class="form-control mt-4" placeholder="Имя" required/>
-						<input type="tel" id="makeWish-phone" class="form-control mt-4" placeholder="Телефон" />
-						<input type="email" id="makeWish-email" class="form-control mt-4" placeholder="E-mail" required/>
-						<textarea id="wish-comment" class="form-control mt-4" placeholder="Комментарий" required></textarea>
-						<div class="form-check">
-							<input
-								class="form-check-input"
-								type="checkbox"
-								value=""
-								id="flexCheckDefault"
-							/>
-							<label class="form-check-label" for="flexCheckDefault">
-								Подтверждаю согласие на обработку персональных данных
-							</label>
-						</div>
-						<input type="submit" id="makeWish-submit" class="btn is-btn is-btn-blue btn-block mt-4" value="Отправить заявку">
-					</form>
+					<?php echo do_shortcode( '[contact-form-7 id="10" title="Осуществить желание"]' ); ?>
 			</div>
 			<div class="modal-footer">
 			</div>

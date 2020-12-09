@@ -23,6 +23,10 @@ textarea::placeholder {
 		color: #111 !important;
 }
 
+textarea {
+		max-height: 120px;
+}
+
 .form-check {
 		margin-top: 1.5rem !important;
 		display: -ms-flex;
@@ -31,13 +35,23 @@ textarea::placeholder {
 }
 .form-check .form-check-input {
 		padding: 0 !important;
-		margin-left: -1.5rem !important;
+		margin-left: -2.5rem !important;
 		margin-right: 1rem;
 		width: 20px;
+		height: 20px;
 		background-color: transparent !important;
 		border: 1px solid #BACED2 !important;
 		box-sizing: border-box;
 		border-radius: 3px;
+}
+.form-check .form-check-input:checked::after {
+		margin-left: 0.4rem !important;
+		margin-top: 0 !important;
+}
+.form-check .form-check-input:checked::before,
+.form-check .form-check-input::after {
+		width: 20px;
+		height: 20px;
 }
 .form-check .form-check-input:checked {
 		background: #4188C9 !important;
