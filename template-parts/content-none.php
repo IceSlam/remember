@@ -9,9 +9,8 @@
 
 ?>
 
-<section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'remember' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Ничего не найдено', 'remember' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -21,7 +20,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'remember' ),
+					__( 'Готовы опубликовать свой первый пост? <a href="%1$s">Нажмите здесь</a>.', 'remember' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -34,18 +33,15 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'remember' ); ?></p>
+			<p><?php esc_html_e( 'К сожалению, ничего не найдено по вашему запросу. Повторите поиск по другим ключевым словам. ', 'remember' ); ?></p>
 			<?php
-			get_search_form();
 
 		else :
 			?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'remember' ); ?></p>
+			<p><?php esc_html_e( 'Вероятно, мы не сможем найти то, что вы ищите. Возможно поиск вам поможет.', 'remember' ); ?></p>
 			<?php
-			get_search_form();
 
 		endif;
 		?>
 	</div><!-- .page-content -->
-</section><!-- .no-results -->

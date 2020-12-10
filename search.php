@@ -27,11 +27,16 @@
  			<h2 class="page-title">
 				<?php
 				/* translators: %s: search query. */
-				printf( esc_html__( 'Результаты по: %s', 'remember' ), '<span>' . get_search_query() . '</span>' );
-				?>
+				printf( esc_html__( 'Результаты по: %s', 'remember' ), '<span>' . get_search_query() . '</span>' ); ?>
+
  			</h2>
  		</div>
-		
+    <div class="col-md-12 mt-3">
+      <?
+      get_search_form();
+      ?>
+    </div>
+
  	</div>
  </div>
  </div>
@@ -52,20 +57,30 @@
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content', 'search' ); ?>
 
+        </div>
+      </section> <?
 			endwhile;
 
 			the_posts_navigation();
 
 		else :
+      ?>
+      <section class="section page-info container mt-5">
+				<div class="row">
 
-			get_template_part( 'template-parts/content', 'none' );
+			       <?
+             get_template_part( 'template-parts/content', 'none' );
+             ?>
+
+        </div>
+      </section>
+      <?
+
 
 		endif;
 		?>
-		</div>
-	</section>
 
 	<?php
 	get_footer();
