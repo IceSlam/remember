@@ -655,6 +655,15 @@ textarea {
 .is-footer .socials .inst:hover svg path {
 		fill: #FF543E;
 }
+.is-footer .socials .yt {
+		background: #ea0c00;
+}
+.is-footer .socials .yt:hover {
+		background: #fff;
+}
+.is-footer .socials .yt:hover svg path {
+		fill: #ea0c00;
+}
 .is-footer .developer a {
 		color: #111;
 		font-weight: 400;
