@@ -33,6 +33,19 @@ select > option {
 		height: 50px !important;
 }
 
+g {
+		cursor: pointer;
+}
+
+g path {
+		transition: fill 0.5s;
+}
+
+g:hover path {
+		transition: fill 0.5s;
+		fill: #094073;
+}
+
 input::placeholder,
 textarea::placeholder {
 		color: #111 !important;
