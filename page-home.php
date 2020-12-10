@@ -381,9 +381,7 @@ get_header();
 			<?php echo do_shortcode( '[contact-form-7 id="265" title="Сообщить о желании ветерана"]' ); ?>
 			<div class="row">
 				<div class="col-md-12">
-					<p class="">
-						По всем вопросам всегда можно обратиться к Председателю Молодежного совета электроэнергетики при Минэнерго России Бессарабовой Анне Владимировне, <a href="tel:+7 (967) 142 36-01">+7 (967) 142 36-01</a>, <a href="mailto:ve.wishs@yandex.ru">ve.wishs@yandex.ru</a>
-					</p>
+					<? the_field('theme_cf_main', 'option'); ?>
 				</div>
 			</div>
 		</div>

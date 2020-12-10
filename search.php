@@ -7,21 +7,40 @@
  * @package Вспоминая_будущее
  */
 
-get_header();
-?>
+ get_header();
+ ?>
 
-	<main id="primary" class="site-main">
+ <div class="container mt-5 heading">
+ 	<div class="row">
+ 		<div class="col-md-12">
+ 			<nav aria-label="breadcrumb">
+ 				<?php
+ 				 if ( function_exists('yoast_breadcrumb') ) {
+ 					 yoast_breadcrumb( '<ol class="breadcrumb">','</ol>' );
+ 				 }
+ 				 ?>
+ 			</nav>
+ 		</div>
+ 	</div>
+ 	<div class="row">
+ 		<div class="col-md-12">
+ 			<h2 class="page-title">
+				<?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Результаты по: %s', 'remember' ), '<span>' . get_search_query() . '</span>' );
+				?>
+ 			</h2>
+ 		</div>
+		
+ 	</div>
+ </div>
+ </div>
+ </header>
 
+ <main class="is-main">
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'remember' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
+			<section class="section page-info container mt-5">
+				<div class="row">
 
 			<?php
 			/* Start the Loop */
@@ -45,9 +64,8 @@ get_header();
 
 		endif;
 		?>
+		</div>
+	</section>
 
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+	<?php
+	get_footer();

@@ -137,6 +137,7 @@ function remember_scripts() {
 	wp_style_add_data( 'remember-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'remember-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'remember-wishes', get_template_directory_uri() . '/js/wishes.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'MDBootstrap', get_template_directory_uri() . '/assets/js/mdb.min.js', array(), 2.2, true );
 	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/assets/js/jquery.3.5.1.min.js', array(), 3.5, true );
 	wp_enqueue_script( 'FancyBox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', array(), 3.5, true );
@@ -211,6 +212,16 @@ function register_navwalker(){
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
+function wisher($kind){
+	if($kind === 0) return '?desire=0';
+	if($kind === 1) return '?desire=1';
+}
+
+function show_all(){
+	if( isset($_GET['desire']) ) return '?desire='.$_GET['desire'].'&all=yes';
+	if( ! isset($_GET['desire']) ) return '?all=yes';
+}
+
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
 // File does not exist... return an error.
 return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
@@ -261,15 +272,22 @@ function my_acf_options_page_settings( $settings )
 
 add_filter('acf/options_page/settings', 'my_acf_options_page_settings');
 
-add_action('admin_menu', 'remove_admin_menu');
-function remove_admin_menu() {
-	remove_menu_page('edit-comments.php'); // Комментарии
-	remove_menu_page('tools.php');
-	remove_menu_page('themes.php');
-	remove_menu_page('plugins.php');
-	remove_menu_page('users.php');
-	remove_menu_page( 'options-general.php');
-	remove_menu_page( 'duplicator' );
-}
+// add_action('admin_menu', 'remove_admin_menu');
+// function remove_admin_menu() {
+// 	remove_menu_page('edit-comments.php'); // Комментарии
+// 	remove_menu_page('tools.php');
+// 	remove_menu_page('themes.php');
+// 	remove_menu_page('plugins.php');
+// 	remove_menu_page('users.php');
+// 	remove_menu_page( 'options-general.php');
+// 	remove_menu_page( 'duplicator' );
+// }
 
 // add_filter('acf/settings/show_admin', '__return_false');
+
+function do_excerpt($string, $word_limit) {
+  $words = explode(' ', $string, ($word_limit + 1));
+  if (count($words) > $word_limit)
+  array_pop($words);
+  echo implode(' ', $words).' ...';
+}
