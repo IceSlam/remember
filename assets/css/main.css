@@ -1245,4 +1245,48 @@ textarea {
 		border-radius: 0;
 		cursor: pointer;
 }
+
+.nav-pills .veterans-btn {
+		background-color: transparent !important;
+		font-size: 1rem !important;
+		font-weight: 600 !important;
+		text-transform: none;
+		padding: 1rem !important;
+		font-size: 1.125rem !important;
+		color: #E31E25 !important;
+		border: 2px solid #E31E25 !important;
+		display: -ms-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.5s;
+}
+.nav-pills .veterans-btn.active,
+.nav-pills .veterans-btn:hover {
+		background: #E31E25 !important;
+		color: #fff !important;
+		transition: all 0.5s;
+}
+
+.list-unstyled.veterans_tab2 li {
+		line-height: 2;
+}
+.list-unstyled.veterans_tab2 li a {
+		color: #062337;
+}
+.list-unstyled.veterans_tab2 li::before {
+		content: "";
+		display: inline-block;
+		transform: rotate(45deg);
+		width: 0.375rem;
+		height: 0.8125rem;
+		border: 0.125rem solid #e13c42;
+		border-top: 0;
+		border-left: 0;
+		margin-left: 0.25rem;
+		margin-top: -1px;
+		background-color: transparent;
+		margin-right: 1rem;
+		z-index: 1;
+}
 /*# sourceMappingURL=main.css.map */

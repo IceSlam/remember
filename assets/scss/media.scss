@@ -63,12 +63,20 @@ $colorModalBg: #E0EDEF;
       left: 1rem;
       z-index: 10;
       transition: position .5s, height .5s, width .5s;
+      .search-wish {
+        display: none !important;
+      }
       .is-menu {
         margin-left: 0;
         .nav-item {
           .nav-link{}
-          .nav-link.active::before,
-          .nav-link.active::after {
+        }
+        .nav-item.active {
+          .nav-link{
+            color: $color !important;
+          }
+          .nav-link::before,
+          .nav-link::after {
             display: none;
           }
         }
@@ -118,6 +126,7 @@ $colorModalBg: #E0EDEF;
         .navbar-nav {
           text-align: center;
           font-weight: 600;
+          margin-left: 0 !important;
         }
         .search {
           display: block;
@@ -136,6 +145,15 @@ $colorModalBg: #E0EDEF;
         }
         .nav-item {
           margin: .5rem auto;
+        }
+        .nav-item.active {
+          .nav-link{
+            color: $color !important;
+          }
+          .nav-link::before,
+          .nav-link::after {
+            display: none;
+          }
         }
       }
     }
@@ -255,6 +273,9 @@ $colorModalBg: #E0EDEF;
       left: 1rem;
       z-index: 10;
       transition: position .5s, height .5s, width .5s;
+      .search-wish {
+        display: none !important;
+      }
       .is-menu {
         margin-left: 0;
         .nav-item {
@@ -310,6 +331,7 @@ $colorModalBg: #E0EDEF;
         .navbar-nav {
           text-align: center;
           font-weight: 600;
+          margin-left: 0 !important;
         }
         .search {
           display: block;
@@ -454,6 +476,9 @@ $colorModalBg: #E0EDEF;
       left: 1rem;
       z-index: 10;
       transition: position .5s, height .5s, width .5s;
+      .search-wish {
+        display: none !important;
+      }
       .is-menu {
         margin-left: 0;
         .nav-item {
@@ -509,6 +534,7 @@ $colorModalBg: #E0EDEF;
         .navbar-nav {
           text-align: center;
           font-weight: 600;
+          margin-left: 0 !important;
         }
         .search {
           display: block;
