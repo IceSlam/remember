@@ -1289,4 +1289,32 @@ textarea {
 		margin-right: 1rem;
 		z-index: 1;
 }
+
+.veterans_video_tab .card {
+		display: -ms-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.veterans_video_tab .card .video-btn {
+		position: absolute;
+		display: block;
+		padding: 1rem;
+		border-radius: 50%;
+		border: 2px solid rgba(255, 255, 255, 0.7);
+		transition: transform 0.5s;
+		cursor: pointer;
+}
+.veterans_video_tab .card .mask {
+		transition: all 0.5s;
+		background-color: rgba(6, 35, 55, 0.4);
+}
+.veterans_video_tab .card:hover .video-btn {
+		transform: scale(1.25);
+		transition: transform 0.5s;
+}
+.veterans_video_tab .card:hover .mask {
+		background-color: rgba(6, 35, 55, 0.7) !important;
+		transition: all 0.5s;
+}
 /*# sourceMappingURL=main.css.map */

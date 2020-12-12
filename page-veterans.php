@@ -96,15 +96,24 @@
             role="tabpanel"
             aria-labelledby="ex1-tab-1"
           >
+
             <h3 class="mb-5">
               <? the_field('veterans_tab1_title'); ?>
             </h3>
-            <video width="100%" controls poster="<? the_field('veterans_tab1_img'); ?>">
-             <source src="<? the_field('veterans_tab1_link'); ?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-             Тег video не поддерживается вашим браузером.
-             <a href="<? the_field('veterans_tab1_link'); ?>">Скачайте видео</a>
-            </video>
-            <a href="<? the_field('veterans_tab1_link'); ?>"><i class="fas fa-save"></i> Скачать видео</a>
+            <div class="row veterans_video_tab">
+            <?php while ( have_rows('veterans_videos') ) : the_row(); ?>
+              <div class="col-md-6 col-lg-4 mt-3">
+                <h4 class="text-center mt-1 mb-3">
+                  <? the_sub_field('title'); ?>
+                </h4>
+                <div class="card bg-image" style="overflow:hidden;">
+                  <img src="<? the_sub_field('preview');?>" class="img-fluid" alt="<? the_sub_field('title'); ?>">
+                  <div class="mask"></div>
+                  <img data-fancybox href="<? the_sub_field('link');?>" src="<? echo get_template_directory_uri() . '/assets/img/video_play_btn.png'; ?>" class="video-btn" alt="">
+                </div>
+              </div>
+      			<?php endwhile; ?>
+            </div>
           </div>
           <div class="tab-pane fade" id="ex1-pills-2" role="tabpanel" aria-labelledby="ex1-tab-2">
             <h3 class="mb-5">
