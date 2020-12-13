@@ -953,6 +953,22 @@ $colorModalBg: #E0EDEF;
       }
     }
   }
+  #remember-menu {
+    text-align: center;
+  }
+  .page,
+  .category,
+  .single,
+  .error404,
+  .search {
+    .section.wishes {
+      .veterans_video_tab {
+        h4 {
+          min-height: 60px;
+        }
+      }
+    }
+  }
   .page {
     .is-header {
       .wishes-btn {
