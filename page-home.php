@@ -106,7 +106,7 @@ get_header();
 				</h2>
 			</div>
 			<div class="col-md-12">
-				<svg width="1170" height="613" viewBox="0 0 1170 613" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg class="img-fluid" width="1170" height="613" viewBox="0 0 1170 613" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g
 						data-toggle="modal"
 	  				data-target="#center-modal"
