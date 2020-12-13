@@ -154,6 +154,20 @@
             <h3>
               Лента памяти всем умершим
             </h3>
+            <div class="row veterans_feed_tab">
+            <?php while ( have_rows('veterans_feed') ) : the_row(); ?>
+              <div class="col-md-6 col-lg-4 mt-3">
+                <h4 class="text-center mt-1 mb-3">
+                  <? the_sub_field('title'); ?>
+                </h4>
+                <div class="card bg-image" style="overflow:hidden;">
+                  <img src="<? the_sub_field('preview');?>" class="img-fluid" alt="<? the_sub_field('title'); ?>">
+                  <div class="mask"></div>
+                  <img data-fancybox href="<? the_sub_field('link');?>" src="<? echo get_template_directory_uri() . '/assets/img/video_play_btn.png'; ?>" class="video-btn" alt="">
+                </div>
+              </div>
+      			<?php endwhile; ?>
+            </div>
           </div>
           <!-- <div class="tab-pane fade" id="ex1-pills-4" role="tabpanel" aria-labelledby="ex1-tab-4">
 
