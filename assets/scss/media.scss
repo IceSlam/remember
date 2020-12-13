@@ -153,25 +153,20 @@ $colorModalBg: #E0EDEF;
       }
     }
     .is-navbar-mobile {
-      transition: left .5s, display .5s;
-      left: -100%;
-      width: 0 !important;
-      display: none;
-    }
-    .is-navbar-mobile.show {
-      display: block;
+      transition: transform .5s, opacity .5s 1s;
+      transform: translate(-110%);
       width: 100% !important;
-      position: fixed !important;
+      position: fixed;
       top: 0;
       bottom: 0;
-      left: 0;
       right: 0;
-      padding: 1rem;
-      transition: left .5s, display .5s;
+      left: 0;
+      opacity: 0;
       z-index: 300;
       .wrapper {
         position: relative;
         height: 100%;
+        width: 100%;
         .navbar-toggler {
           position: absolute !important;
           right: 0;
@@ -217,6 +212,19 @@ $colorModalBg: #E0EDEF;
           }
         }
       }
+    }
+    .is-navbar-mobile.show {
+      transform: translate(0%);
+      opacity: 1;
+      width: 100% !important;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      transition: transform 1.5s, opacity .5s .25s;
+      z-index: 300;
     }
     .header-wish {
       margin-top: -5rem;
@@ -297,9 +305,6 @@ $colorModalBg: #E0EDEF;
   .search {
     .is-header {
       .btn.wish {
-        display: none;
-      }
-      .is-navbar-mobile {
         display: none;
       }
       .heading {
@@ -415,25 +420,22 @@ $colorModalBg: #E0EDEF;
         margin-bottom: 1rem;
       }
     }
+
     .is-navbar-mobile {
-      transition: left .5s, display .5s;
-      left: -100%;
-      width: 0 !important;
-    }
-    .is-navbar-mobile.show {
-      display: block;
+      transition: transform .5s, opacity .5s 1s;
+      transform: translate(-110%);
       width: 100% !important;
-      position: fixed !important;
+      position: fixed;
       top: 0;
       bottom: 0;
-      left: 0;
       right: 0;
-      padding: 1rem;
-      transition: left .5s, display .5s;
+      left: 0;
+      opacity: 0;
       z-index: 300;
       .wrapper {
         position: relative;
         height: 100%;
+        width: 100%;
         .navbar-toggler {
           position: absolute !important;
           right: 0;
@@ -469,7 +471,29 @@ $colorModalBg: #E0EDEF;
         .nav-item {
           margin: .5rem auto;
         }
+        .nav-item.active {
+          .nav-link{
+            color: $color !important;
+          }
+          .nav-link::before,
+          .nav-link::after {
+            display: none;
+          }
+        }
       }
+    }
+    .is-navbar-mobile.show {
+      transform: translate(0%);
+      opacity: 1;
+      width: 100% !important;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      transition: transform 1.5s, opacity .5s .25s;
+      z-index: 300;
     }
     .header-wish {
       margin-top: 13rem;
@@ -554,9 +578,6 @@ $colorModalBg: #E0EDEF;
         .btn.wish {
           display: none;
         }
-      }
-      .is-navbar-mobile {
-        display: none;
       }
       .header-wish {
       }
@@ -681,25 +702,22 @@ $colorModalBg: #E0EDEF;
       }
 
     }
+
     .is-navbar-mobile {
-      transition: left .5s, display .5s;
-      left: -100%;
-      width: 0 !important;
-    }
-    .is-navbar-mobile.show {
-      display: block;
-      width: 100% !important;
-      position: fixed !important;
+      transition: transform .5s, opacity .5s 1s;
+      transform: translate(-110%);
+      width: 70% !important;
+      position: fixed;
       top: 0;
       bottom: 0;
-      left: 0;
       right: 0;
-      padding: 1rem;
-      transition: left .5s, display .5s;
+      left: 0;
+      opacity: 0;
       z-index: 300;
       .wrapper {
         position: relative;
         height: 100%;
+        width: 100%;
         .navbar-toggler {
           position: absolute !important;
           right: 0;
@@ -735,7 +753,29 @@ $colorModalBg: #E0EDEF;
         .nav-item {
           margin: .5rem auto;
         }
+        .nav-item.active {
+          .nav-link{
+            color: $color !important;
+          }
+          .nav-link::before,
+          .nav-link::after {
+            display: none;
+          }
+        }
       }
+    }
+    .is-navbar-mobile.show {
+      transform: translate(0%);
+      opacity: 1;
+      width: 70% !important;
+      position: fixed !important;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      transition: transform 1.5s, opacity .5s .25s;
+      z-index: 300;
     }
     .header-wish {
       margin-top: 20rem;
