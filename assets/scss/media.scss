@@ -19,12 +19,67 @@ $colorModalBg: #E0EDEF;
   body {
     overflow-x: hidden;
   }
+  .category {
+    .wishes-btn {
+      margin-bottom: 1rem;
+    }
+    .is-main {
+      .section.wishes {
+        padding: 1.5rem;
+        .card-wrapper {
+          .card {
+            img {
+              margin-top: 4rem;
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .single {
+    .is-main {
+      .section.wishes-item {
+        .veteran-photo {
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
   .page .is-header {
     padding-top: 0rem;
     .heading {
-      margin-top: -20rem !important;
       .wishes-btn {
         margin-bottom: 2rem;
+      }
+    }
+  }
+  .page,
+  .page-id-14 {
+    .heading {
+      .nav-pills {
+        margin-left: 0;
+        padding-right: 0;
+        li {
+          width: 100%;
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 1rem;
+          a {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+    .section.wishes {
+      .veterans_tab2 {
+        margin-left: 1rem;
+        li {
+          margin-bottom: 1rem;
+        }
       }
     }
   }
@@ -56,6 +111,8 @@ $colorModalBg: #E0EDEF;
   .is-header {
     background-size: 300%;
     overflow-x: hidden;
+    padding-top: 5rem !important;
+    margin-top: 0 !important;
     .is-navbar {
       position: fixed;
       margin-left: 0;
@@ -91,11 +148,15 @@ $colorModalBg: #E0EDEF;
         justify-content: center;
         margin-bottom: 1rem;
       }
+      .wish {
+        display: none;
+      }
     }
     .is-navbar-mobile {
       transition: left .5s, display .5s;
       left: -100%;
       width: 0 !important;
+      display: none;
     }
     .is-navbar-mobile.show {
       display: block;
@@ -229,10 +290,67 @@ $colorModalBg: #E0EDEF;
   body {
     overflow-x: hidden;
   }
+  .page,
+  .single,
+  .category,
+  .error404,
+  .search {
+    .is-header {
+      .btn.wish {
+        display: none;
+      }
+      .is-navbar-mobile {
+        display: none;
+      }
+      .heading {
+        margin-top: 7rem !important;
+        .nav-pills {
+          padding-right: 0;
+          li {
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 1rem;
+            a {
+              width: 100%;
+            }
+          }
+        }
+        .wishes-btn {
+          margin-bottom: 1rem;
+        }
+      }
+
+    }
+    .is-main {
+      .section.wishes {
+        .veterans_tab2 {
+          li {
+            margin-bottom: 1rem;
+          }
+        }
+        .card-wrapper {
+          .card {
+            img {
+              margin-top: 4rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+      .section.wishes-item {
+        .veteran-photo {
+          margin-top: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
   .page .is-header {
     padding-top: 0rem;
     .heading {
-      margin-top: -20rem !important;
       .wishes-btn {
         margin-bottom: 2rem;
       }
@@ -426,10 +544,72 @@ $colorModalBg: #E0EDEF;
   body {
     overflow-x: hidden;
   }
+  .page,
+  .single,
+  .category,
+  .error404,
+  .search {
+    .is-header {
+      .is-navbar {
+        .btn.wish {
+          display: none;
+        }
+      }
+      .is-navbar-mobile {
+        display: none;
+      }
+      .header-wish {
+      }
+      .heading {
+        nav {
+          margin-top: 4rem;
+        }
+        .wishes-btn {
+          margin-bottom: 1rem;
+        }
+        .nav-pills {
+          .nav-item {
+            margin-bottom: 1rem;
+          }
+          .nav-item:last-child {
+            width: 100%;
+          }
+        }
+        .offset-md-5 {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+    .is-main {
+      .section.wishes {
+        .card-wrapper {
+          .card {
+            img {
+              margin-top: 4rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        .veterans_video_tab {
+          .text-center {
+            min-height: 60px;
+          }
+        }
+      }
+      .section.wishes-item {
+        .wish-info {
+          order: 1;
+        }
+        .col-md-5 {
+          order: 2;
+        }
+      }
+    }
+  }
   .page .is-header {
     padding-top: 0rem;
     .heading {
-      margin-top: -20rem !important;
       .wishes-btn {
         margin-bottom: 2rem;
       }
@@ -499,6 +679,7 @@ $colorModalBg: #E0EDEF;
         justify-content: center;
         margin-bottom: 1rem;
       }
+
     }
     .is-navbar-mobile {
       transition: left .5s, display .5s;
@@ -651,6 +832,33 @@ $colorModalBg: #E0EDEF;
         }
       }
       .is-menu {
+      }
+    }
+  }
+  .page,
+  .category,
+  .single,
+  .error404,
+  .search {
+    .is-main {
+      .section.wishes {
+        .card-wrapper {
+          .card {
+            img {
+              margin-top: calc(100% - 130%);
+            }
+          }
+        }
+        .veterans_video_tab {
+          h4 {
+            min-height: 60px;
+          }
+        }
+      }
+      .section.wishes-item {
+        .veteran-photo {
+          margin-top: calc(100% - 200%);
+        }
       }
     }
   }
