@@ -1241,7 +1241,7 @@ textarea {
 		min-height: 300px;
 		background-position: center !important;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: 100% !important;
 		border-radius: 0;
 		cursor: pointer;
 }

@@ -430,7 +430,7 @@ get_header();
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="center-modal-label">
-									Северо-западный ФО
+									Центральный ФО
 								</h5>
 								<button
 									type="button"
