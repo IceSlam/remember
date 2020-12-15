@@ -352,7 +352,7 @@ textarea {
 		font-size: 15px;
 		color: #E31E25;
 		margin-left: 0.5rem;
-		min-width: 270px !important;
+		min-width: 270px;
 }
 .page .is-header .header-wish,
 .category .is-header .header-wish,
@@ -488,7 +488,6 @@ textarea {
 		font-size: 15px;
 		color: #E31E25;
 		margin-left: 0.5rem;
-		min-width: 200px;
 }
 .page.home .is-header .header-wish {
 		border: 2px solid #E31E25;
@@ -938,6 +937,7 @@ textarea {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		height: 100%;
 }
 .page .is-header .wishes-btn svg,
 .category .is-header .wishes-btn svg,
