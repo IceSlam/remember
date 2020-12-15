@@ -120,15 +120,6 @@
               Воспоминания ветеранов-энергетиков
             </h3>
             <ul class="list-unstyled veterans_tab2">
-              <?php while ( have_rows('remember_list_pages') ) : the_row(); ?>
-                <li>
-                  <a href="<? the_sub_field('link'); ?>" target="_blank">
-                    <? the_sub_field('author'); ?> - <? the_sub_field('title'); ?>
-                  </a>
-                </li>
-      				<?php endwhile; ?>
-            </ul>
-            <ul class="list-unstyled veterans_tab2">
               <?php while ( have_rows('remembers_list') ) : the_row(); ?>
                 <li>
                   <a href="<? the_sub_field('link'); ?>" target="_blank">
