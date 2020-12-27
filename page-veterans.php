@@ -124,6 +124,9 @@
                 <li>
                   <a href="<? the_sub_field('link'); ?>" target="_blank">
                     <? the_sub_field('author'); ?> - <? the_sub_field('title'); ?>
+                    <sup>
+                      <i class="fas fa-link"></i>
+                    </sup>
                   </a>
                 </li>
       				<?php endwhile; ?>

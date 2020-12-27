@@ -751,7 +751,7 @@ textarea {
 		font-size: 1.0625rem;
 }
 .is-main .is-section.mechanics {
-		background: url(../img/section_mechanics_bg.png) no-repeat right center, #E9EEEF;
+		background: url(../img/section_mechanics_bg.png) no-repeat right center, #F8F8F8;
 		background-size: 45%;
 }
 .is-main .is-section.mechanics .icon {

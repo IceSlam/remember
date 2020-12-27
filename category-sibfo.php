@@ -104,9 +104,9 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="row">
-                      <div class="col-lg-6 d-flex justify-content-center">
+                      <a href="<? the_permalink(); ?>" class="col-lg-6 d-flex justify-content-center">
                         <img src="<? the_field('veteran_photo'); ?>" alt="<? the_field('veteran_fname'); ?>" class="img-fluid">
-                      </div>
+                      </a>
                       <div class="col-lg-6 d-flex align-items-end">
                         <div class="row">
                           <div class="col-lg-12">

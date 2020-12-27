@@ -68,9 +68,9 @@ get_header();
 					</h2>
 				</div>
 				<div class="offset-lg-2 col-lg-7 d-flex align-items-center">
-					<p>
+					<div class="d-block">
 						<? the_field('target_description'); ?>
-					</p>
+					</div>
 				</div>
 			</div>
 		</div>
