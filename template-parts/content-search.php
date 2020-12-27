@@ -9,8 +9,8 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="card p-5 col-md-6">
+<article id="post-<?php the_ID(); ?>" class="col-md-6 mb-3">
+	<div class="card p-5">
 		<header class="entry-header">
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark" style="color:#111;">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

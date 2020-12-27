@@ -43,9 +43,10 @@
  </header>
 
  <main class="is-main">
+
+     <section class="section page-info container mt-5">
+       <div class="row">
 		<?php if ( have_posts() ) : ?>
-			<section class="section page-info container mt-5">
-				<div class="row">
 
 			<?php
 			/* Start the Loop */
@@ -58,9 +59,7 @@
 				 * called content-search.php and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', 'search' ); ?>
-
-        </div>
-      </section> <?
+ <?
 			endwhile;
 
 			the_posts_navigation();
@@ -82,5 +81,7 @@
 		endif;
 		?>
 
+            </div>
+          </section>
 	<?php
 	get_footer();
