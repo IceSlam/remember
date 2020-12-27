@@ -9,6 +9,10 @@
 		color: #fff;
 }
 
+.dropdown-menu.show {
+		width: 252px;
+}
+
 .dropdown-menu {
 		transform: translateX(calc(0% - 45%));
 		margin-top: 1rem !important;
