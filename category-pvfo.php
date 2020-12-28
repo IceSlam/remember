@@ -91,13 +91,15 @@
                     <p class="region">
                       <? the_field('info_region'); ?>
                     </p>
-                    <h3>
-                      <? the_field('veteran_fname'); ?>
-                      <br>
-                      <span class="last-name">
-                        <? the_field('veteran_lname'); ?>
-                      </span>
-                    </h3>
+                    <a href="<? the_permalink(); ?>">
+                      <h3>
+                        <? the_field('veteran_fname'); ?>
+                        <br>
+                        <span class="last-name">
+                          <? the_field('veteran_lname'); ?>
+                        </span>
+                      </h3>
+                    </a>
                     <p class="age">
                       <? the_field('veteran_age'); ?>
                     </p>
