@@ -67,18 +67,6 @@
             >Лента памяти</a
           >
         </li>
-        <!-- <li class="nav-item col-md-6 col-lg-3" role="presentation">
-          <a
-            class="nav-link text-center veterans-btn h-100"
-            id="ex1-tab-4"
-            data-toggle="pill"
-            href="#ex1-pills-4"
-            role="tab"
-            aria-controls="ex1-pills-4"
-            aria-selected="false"
-            >Выдающиеся деятели энергетики</a
-          >
-        </li> -->
       </ul>
      </div>
    </div>
@@ -103,10 +91,10 @@
             <div class="row veterans_video_tab">
             <?php while ( have_rows('veterans_videos') ) : the_row(); ?>
               <div class="col-md-6 col-lg-4 mt-3">
-                <h4 class="text-center mt-1 mb-3">
+                <h4 class="text-center mt-1 mb-3" style="min-height: 58px;">
                   <? the_sub_field('title'); ?>
                 </h4>
-                <div class="card bg-image" style="overflow:hidden;">
+                <div class="card bg-image" style="overflow:hidden;background: url(<? the_sub_field('preview');?>);">
                   <img src="<? the_sub_field('preview');?>" class="img-fluid" alt="<? the_sub_field('title'); ?>">
                   <div class="mask"></div>
                   <img data-fancybox href="<? the_sub_field('link');?>" src="<? echo get_template_directory_uri() . '/assets/img/video_play_btn.png'; ?>" class="video-btn" alt="">
@@ -172,9 +160,6 @@
       			<?php endwhile; ?>
             </div>
           </div>
-          <!-- <div class="tab-pane fade" id="ex1-pills-4" role="tabpanel" aria-labelledby="ex1-tab-4">
-
-          </div> -->
         </div>
       </div>
     </div>

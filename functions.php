@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 if ( ! function_exists( 'remember_setup' ) ) :
@@ -130,7 +130,7 @@ function remember_scripts() {
 	wp_enqueue_style( 'remember-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'MDBootstrap-style', get_template_directory_uri() . '/assets/css/mdb.min.css', array(), 2.2 );
 	wp_enqueue_style( 'Montserrat-font', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap', array(), _S_VERSION );
-	wp_enqueue_style( 'FonAwesome-font', 'https://use.fontawesome.com/releases/v5.15.1/css/all.css', array(), 5.15 );
+	wp_enqueue_style( 'FonAwesome-font', 'https://use.fontawesome.com/releases/v5.15.2/css/all.css', array(), 5.15 );
 	wp_enqueue_style( 'FancyBox-style', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', array(), 3.5 );
 	wp_enqueue_style( 'Main-style', get_template_directory_uri() . '/assets/css/main.min.css', array(), _S_VERSION );
 	wp_enqueue_style( 'Media-style', get_template_directory_uri() . '/assets/css/media.min.css', array(), _S_VERSION );
@@ -276,7 +276,7 @@ add_action('admin_menu', 'remove_admin_menu');
 function remove_admin_menu() {
 	remove_menu_page('edit-comments.php'); // Комментарии
 	remove_menu_page('tools.php');
-	remove_menu_page('themes.php');
+//	remove_menu_page('themes.php');
 	remove_menu_page('plugins.php');
 	remove_menu_page('users.php');
 	remove_menu_page( 'options-general.php');

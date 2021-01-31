@@ -20,8 +20,8 @@ WordPress-тема оформления сайта проекта Вспомин
 
 * Разработчик: [IceSlam](https://iceslam.ru/ "IceSlam")
 * Компания-разработчик: [ИА Альянс+](https://alianscompany.ru "Интернет-агентство Альянс+")
-* Версия: 1.0
-* Инструменты: Bootstrap 5.0.0 alpha-3, MDB UI Kit 2.2.1, FontAwesome 5.15.1
+* Версия: 1.0.1
+* Инструменты: Bootstrap 5.0.0 alpha-3, MDB UI Kit 2.2.1, FontAwesome 5.15.2
 
 ---
 

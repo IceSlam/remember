@@ -1147,6 +1147,13 @@ z-index: 1;
     justify-content: center;
     align-items: center;
     min-height: 311px;
+    background-position: center !important;
+    background-size: cover !important;
+    min-height: 311px;
+    background-repeat: no-repeat !important;
+    .img-fluid {
+      opacity: 0;
+    }
     .video-btn {
       position: absolute;
       display: block;
