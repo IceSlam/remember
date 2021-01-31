@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Вспоминая будущее" exclude=".svn;.cvs;.idea;.DS_Store;.hg;*.hprof;*.pyc" autoUploadExternalChanges="true">
+=======
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Вспоминая будущее" exclude=".svn;.cvs;.idea;.DS_Store;hg;*.hprof;*.pyc" autoUploadExternalChanges="true">
+>>>>>>> origin/master
     <serverData>
       <paths name="Вспоминая будущее">
         <serverdata>
