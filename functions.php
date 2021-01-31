@@ -276,7 +276,7 @@ add_action('admin_menu', 'remove_admin_menu');
 function remove_admin_menu() {
 	remove_menu_page('edit-comments.php'); // Комментарии
 	remove_menu_page('tools.php');
-//	remove_menu_page('themes.php');
+	remove_menu_page('themes.php');
 	remove_menu_page('plugins.php');
 	remove_menu_page('users.php');
 	remove_menu_page( 'options-general.php');
